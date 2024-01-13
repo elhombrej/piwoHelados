@@ -1,15 +1,5 @@
 import * as React from "react";
-import {
-  Box,
-  Button,
-  Card,
-  CardActionArea,
-  CardContent,
-  Grid,
-  IconButton,
-} from "@mui/material";
-import { useState } from "react";
-import heladosImg from "./images/helados.png";
+import { Box, Grid, IconButton } from "@mui/material";
 import piwologocolor from "./images/piwologocolor.png";
 import piwologo from "./images/piwologo.png";
 import pedidosyalogo from "./images/pedidosya.svg";
@@ -23,7 +13,6 @@ import piwojugos from "./images/piwojugos.jpg";
 import piwolocal1 from "./images/piwolocal1.jpg";
 import "./App.css";
 import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
@@ -36,15 +25,11 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { styled } from "@mui/material/styles";
 import ButtonBase from "@mui/material/ButtonBase";
 import "leaflet/dist/leaflet.css";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Menu, { MenuProps } from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import EditIcon from "@mui/icons-material/Edit";
-import Divider from "@mui/material/Divider";
-import ArchiveIcon from "@mui/icons-material/Archive";
-import FileCopyIcon from "@mui/icons-material/FileCopy";
-import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import "react-slideshow-image/dist/styles.css";
+import { Slide as SlideShow } from "react-slideshow-image";
 
 interface Props {
   /**
@@ -205,6 +190,23 @@ function App(props: Props) {
     setAnchorEl(null);
   };
 
+  const responsiveSettings = [
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      },
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+  ];
+
   return (
     <Grid
       container
@@ -238,14 +240,20 @@ function App(props: Props) {
                 display: { xs: "flex", md: "none" },
               }}
             >
+              <img src={piwologo} width={"150px"} />
+            </Box>
+
+            <Box
+              sx={{
+                display: { xs: "flex", md: "none" },
+              }}
+            >
               <p
                 style={{
                   margin: 0,
                   fontSize: 30,
                 }}
-              >
-                MAS QUE HELADOS
-              </p>
+              ></p>
             </Box>
 
             <Box
@@ -281,9 +289,9 @@ function App(props: Props) {
                 />
               </a> */}
             </Box>
-            <div
-              style={{
-                display: "flex",
+            <Box
+              sx={{
+                display: { xs: "none", md: "flex" },
                 alignItems: "center",
                 justifyContent: "center",
                 flexDirection: "column",
@@ -291,7 +299,7 @@ function App(props: Props) {
               }}
             >
               <img src={piwologo} width={"150px"} />
-            </div>
+            </Box>
             <Box
               sx={{
                 display: { xs: "none", md: "flex" },
@@ -321,6 +329,15 @@ function App(props: Props) {
                   // disableElevation
                   onClick={handleClick}
                 >
+                  <p
+                    style={{
+                      margin: 0,
+                      fontSize: 30,
+                      color: "#ffffff",
+                    }}
+                  >
+                    MAS QUE HELADOS
+                  </p>
                   <KeyboardArrowDownIcon sx={{ color: "#ffffff" }} />
                 </IconButton>
                 <StyledMenu
@@ -412,37 +429,49 @@ function App(props: Props) {
           {/* </Toolbar> */}
         </AppBar>
       </HideOnScroll>
-      {/* <Grid
-        item
-        style={{
-          backgroundColor: "#ffffff",
-          backgroundImage: `url(${piwoheader})`, // Utiliza la imagen de fondo
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover", // Ajusta según tus necesidades
-          width: "100vw",
-          height: "400px",
-          minHeight: "400px",
-          marginTop: 50,
-        }}
-      ></Grid>{" "} */}
+
       <Grid
         item
         style={{
           maxWidth: "100%",
+          width: "100%",
           height: "400px",
           minHeight: "400px",
           marginTop: 90,
         }}
+        sx={{ display: { xs: "none", md: "block" } }}
       >
         <Fade indicators={true} canSwipe={true} arrows={true}>
           <div className="each-slide">
             <div>
               <img src={images[0]} />
             </div>
-            <p>First Slide</p>
+            <p
+              style={{
+                color: "#ffffff",
+                fontWeight: "bold",
+                fontSize: 25,
+                padding: 40,
+              }}
+            >
+              Cada uno de nuestros sabores nace de una receta única. Cada uno de
+              nuestros sabores nace de una receta única. Cada uno de nuestros
+              sabores nace de una receta única.
+            </p>
           </div>
           <div className="each-slide">
-            <p>Second Slide</p>
+            <p
+              style={{
+                color: "#ffffff",
+                fontWeight: "bold",
+                fontSize: 25,
+                padding: 40,
+              }}
+            >
+              Cada uno de nuestros sabores nace de una receta única. Cada uno de
+              nuestros sabores nace de una receta única. Cada uno de nuestros
+              sabores nace de una receta única.
+            </p>
             <div>
               <img src={images[1]} />
             </div>
@@ -451,15 +480,113 @@ function App(props: Props) {
             <div>
               <img src={images[2]} />
             </div>
-            <p>Third Slide</p>
+            <p
+              style={{
+                color: "#ffffff",
+                fontWeight: "bold",
+                fontSize: 25,
+                padding: 40,
+              }}
+            >
+              Cada uno de nuestros sabores nace de una receta única. Cada uno de
+              nuestros sabores nace de una receta única. Cada uno de nuestros
+              sabores nace de una receta única.
+            </p>
           </div>
           <div className="each-slide">
-            <p>Second Slide</p>
+            <p
+              style={{
+                color: "#ffffff",
+                fontWeight: "bold",
+                fontSize: 25,
+                padding: 40,
+              }}
+            >
+              Cada uno de nuestros sabores nace de una receta única. Cada uno de
+              nuestros sabores nace de una receta única. Cada uno de nuestros
+              sabores nace de una receta única.
+            </p>
             <div>
               <img src={images[3]} />
             </div>
           </div>
         </Fade>
+      </Grid>
+
+      <Grid
+        item
+        style={{
+          maxWidth: "100%",
+          width: "100%",
+          height: "400px",
+          minHeight: "400px",
+          marginTop: 90,
+        }}
+        sx={{ display: { xs: "block", md: "none" } }}
+      >
+        <SlideShow
+          slidesToScroll={1}
+          slidesToShow={1}
+          indicators={true}
+          autoplay={true}
+          responsive={[
+            {
+              breakpoint: 800,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 500,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ]}
+        >
+          <div
+            style={{
+              backgroundImage: `url(${images[0]})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              width: "100%",
+              height: "100%",
+              minHeight: "400px",
+            }}
+          ></div>
+          <div
+            style={{
+              backgroundImage: `url(${images[1]})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              width: "100%",
+              height: "100%",
+              minHeight: "400px",
+            }}
+          ></div>
+          <div
+            style={{
+              backgroundImage: `url(${images[2]})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              width: "100%",
+              height: "100%",
+              minHeight: "400px",
+            }}
+          ></div>
+          <div
+            style={{
+              backgroundImage: `url(${images[3]})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              width: "100%",
+              height: "100%",
+              minHeight: "400px",
+            }}
+          ></div>
+        </SlideShow>
       </Grid>
       <Grid
         item
@@ -484,8 +611,28 @@ function App(props: Props) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              <Card>
-                <CardContent
+              <Box
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <h1
+                  style={{ fontSize: 60, fontWeight: "bold", color: "#2e2e2e" }}
+                >
+                  SABORES
+                </h1>
+
+                {/* <Button variant="text" size="large"> */}
+                <h2 style={{ color: "#9e9e9e" }}>
+                  Cada uno de nuestros sabores nace de una receta única. Cada
+                  uno de nuestros sabores nace de una receta única. Cada uno de
+                  nuestros sabores nace de una receta única.
+                </h2>
+
+                <div
                   style={{
                     display: "flex",
                     flexDirection: "column",
@@ -493,37 +640,13 @@ function App(props: Props) {
                     justifyContent: "center",
                   }}
                 >
-                  <h1 style={{ fontSize: 60, fontWeight: "bold" }}>SABORES</h1>
-
                   {/* <Button variant="text" size="large"> */}
-                  <h2>
-                    Cada uno de nuestros sabores nace de una receta única. Cada
-                    uno de nuestros sabores nace de una receta única. Cada uno
-                    de nuestros sabores nace de una receta única.
-                  </h2>
-                  <h2>
-                    Cada uno de nuestros sabores nace de una receta única.
-                  </h2>
-                  <h2>
-                    Cada uno de nuestros sabores nace de una receta única.
-                  </h2>
+                  <a href="/" style={{ fontSize: 50 }}>
+                    VER SABORES
+                  </a>
                   {/* </Button> */}
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {/* <Button variant="text" size="large"> */}
-                    <a href="/" style={{ fontSize: 50 }}>
-                      VER SABORES
-                    </a>
-                    {/* </Button> */}
-                  </div>
-                </CardContent>
-              </Card>
+                </div>
+              </Box>
             </motion.div>
           </Grid>
 
@@ -533,8 +656,28 @@ function App(props: Props) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              <Card>
-                <CardContent
+              <Box
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <h1
+                  style={{ fontSize: 60, fontWeight: "bold", color: "#2e2e2e" }}
+                >
+                  SABORES
+                </h1>
+
+                {/* <Button variant="text" size="large"> */}
+                <h2 style={{ color: "#9e9e9e" }}>
+                  Cada uno de nuestros sabores nace de una receta única. Cada
+                  uno de nuestros sabores nace de una receta única. Cada uno de
+                  nuestros sabores nace de una receta única.
+                </h2>
+
+                <div
                   style={{
                     display: "flex",
                     flexDirection: "column",
@@ -542,39 +685,13 @@ function App(props: Props) {
                     justifyContent: "center",
                   }}
                 >
-                  <h1 style={{ fontSize: 60, fontWeight: "bold" }}>
-                    SOBRE NOSOTROS
-                  </h1>
-
                   {/* <Button variant="text" size="large"> */}
-                  <h2>
-                    Cada uno de nuestros sabores nace de una receta única. Cada
-                    uno de nuestros sabores nace de una receta única. Cada uno
-                    de nuestros sabores nace de una receta única.
-                  </h2>
-                  <h2>
-                    Cada uno de nuestros sabores nace de una receta única.
-                  </h2>
-                  <h2>
-                    Cada uno de nuestros sabores nace de una receta única.
-                  </h2>
+                  <a href="/" style={{ fontSize: 50 }}>
+                    VER SABORES
+                  </a>
                   {/* </Button> */}
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {/* <Button variant="text" size="large"> */}
-                    <a href="/" style={{ fontSize: 50 }}>
-                      VER SABORES
-                    </a>
-                    {/* </Button> */}
-                  </div>
-                </CardContent>
-              </Card>
+                </div>
+              </Box>
             </motion.div>
           </Grid>
 
@@ -584,8 +701,28 @@ function App(props: Props) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              <Card>
-                <CardContent
+              <Box
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <h1
+                  style={{ fontSize: 60, fontWeight: "bold", color: "#2e2e2e" }}
+                >
+                  SABORES
+                </h1>
+
+                {/* <Button variant="text" size="large"> */}
+                <h2 style={{ color: "#9e9e9e" }}>
+                  Cada uno de nuestros sabores nace de una receta única. Cada
+                  uno de nuestros sabores nace de una receta única. Cada uno de
+                  nuestros sabores nace de una receta única.
+                </h2>
+
+                <div
                   style={{
                     display: "flex",
                     flexDirection: "column",
@@ -593,37 +730,13 @@ function App(props: Props) {
                     justifyContent: "center",
                   }}
                 >
-                  <h1 style={{ fontSize: 60, fontWeight: "bold" }}>LOCALES</h1>
-
                   {/* <Button variant="text" size="large"> */}
-                  <h2>
-                    Cada uno de nuestros sabores nace de una receta única. Cada
-                    uno de nuestros sabores nace de una receta única. Cada uno
-                    de nuestros sabores nace de una receta única.
-                  </h2>
-                  <h2>
-                    Cada uno de nuestros sabores nace de una receta única.
-                  </h2>
-                  <h2>
-                    Cada uno de nuestros sabores nace de una receta única.
-                  </h2>
+                  <a href="/" style={{ fontSize: 50 }}>
+                    VER SABORES
+                  </a>
                   {/* </Button> */}
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {/* <Button variant="text" size="large"> */}
-                    <a href="/" style={{ fontSize: 50 }}>
-                      VER SABORES
-                    </a>
-                    {/* </Button> */}
-                  </div>
-                </CardContent>
-              </Card>
+                </div>
+              </Box>
             </motion.div>
           </Grid>
         </Grid>
@@ -637,7 +750,7 @@ function App(props: Props) {
           // minHeight: "400px",
           minHeight: "fit-content",
           padding: 50,
-          margin: 50,
+          // margin: 50,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -646,84 +759,164 @@ function App(props: Props) {
       >
         <img src={pedidosyalogo} alt="" width={300} />
 
-        <Box
-          gap={10}
+        <Grid
+          container
+          gap={5}
           sx={{
             display: "flex",
+            flexDirection: "row",
             alignItems: "center",
             justifyContent: "center",
-            flexWrap: "wrap",
+            // flexWrap: "wrap",
             // minWidth: 300,
             width: "100%",
             marginTop: 5,
           }}
         >
-          <ImageButton
-            focusRipple
-            key={piwocafe}
-            sx={{
-              width: { xs: "90%", md: "30%" },
-              minHeight: 200,
-            }}
-          >
-            <a
-              href="https://www.pedidosya.com.uy/restaurantes/montevideo/piwo-cafe-menu?category=71&search=piwo"
-              target="_ black"
+          <Grid item xs={12} md={5}>
+            <ImageButton
+              focusRipple
+              key={piwocafe}
+              sx={{
+                width: { xs: "100%", md: "100%" },
+                minHeight: 200,
+              }}
             >
-              <ImageSrc style={{ backgroundImage: `url(${piwocafe})` }} />
-              <ImageBackdrop className="MuiImageBackdrop-root" />
-              <Image>
-                <Typography
-                  component="span"
-                  variant="subtitle1"
-                  color="inherit"
-                  sx={{
-                    position: "relative",
-                    p: 4,
-                    pt: 2,
-                    pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
-                  }}
-                >
-                  <p style={{ fontSize: 50, height: 10 }}>PIWO CAFE</p>
-                  <ImageMarked className="MuiImageMarked-root" />
-                </Typography>
-              </Image>
-            </a>
-          </ImageButton>
+              <a
+                href="https://www.pedidosya.com.uy/restaurantes/montevideo/piwo-cafe-menu?category=71&search=piwo"
+                target="_ black"
+              >
+                <ImageSrc style={{ backgroundImage: `url(${piwocafe})` }} />
+                <ImageBackdrop className="MuiImageBackdrop-root" />
+                <Image>
+                  <Typography
+                    component="span"
+                    variant="subtitle1"
+                    color="inherit"
+                    sx={{
+                      position: "relative",
+                      p: 4,
+                      pt: 2,
+                      pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                    }}
+                  >
+                    <p style={{ fontSize: 50, height: 10 }}>PIWO CAFE</p>
+                    <ImageMarked className="MuiImageMarked-root" />
+                  </Typography>
+                </Image>
+              </a>
+            </ImageButton>
 
-          <ImageButton
-            focusRipple
-            key={piwosalado}
-            sx={{
-              width: { xs: "90%", md: "30%" },
-              minHeight: 200,
-            }}
-          >
-            <a
-              href="https://www.pedidosya.com.uy/restaurantes/montevideo/piwo-resto-menu?category=71&search=piwo"
-              target="_ black"
+            <Box
+              sx={{
+                width: { xs: "100%", md: "100%" },
+                // minHeight: 200,
+              }}
             >
-              <ImageSrc style={{ backgroundImage: `url(${piwosalado})` }} />
-              <ImageBackdrop className="MuiImageBackdrop-root" />
-              <Image>
-                <Typography
-                  component="span"
-                  variant="subtitle1"
-                  color="inherit"
-                  sx={{
-                    position: "relative",
-                    p: 4,
-                    pt: 2,
-                    pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
-                  }}
-                >
-                  <p style={{ fontSize: 50, height: 10 }}>PIWO RESTO</p>
-                  <ImageMarked className="MuiImageMarked-root" />
-                </Typography>
-              </Image>
-            </a>
-          </ImageButton>
-        </Box>
+              <h2 style={{ color: "#9e9e9e" }}>
+                Cada uno de nuestros sabores nace de una receta única. Cada uno
+                de nuestros sabores nace de una receta única. Cada uno de
+                nuestros sabores nace de una receta única.
+              </h2>
+            </Box>
+          </Grid>
+
+          <Grid item xs={12} md={5}>
+            <ImageButton
+              focusRipple
+              key={piwosalado}
+              sx={{
+                width: { xs: "100%", md: "100%" },
+                minHeight: 200,
+              }}
+            >
+              <a
+                href="https://www.pedidosya.com.uy/restaurantes/montevideo/piwo-resto-menu?category=71&search=piwo"
+                target="_ black"
+              >
+                <ImageSrc style={{ backgroundImage: `url(${piwosalado})` }} />
+                <ImageBackdrop className="MuiImageBackdrop-root" />
+                <Image>
+                  <Typography
+                    component="span"
+                    variant="subtitle1"
+                    color="inherit"
+                    sx={{
+                      position: "relative",
+                      p: 4,
+                      pt: 2,
+                      pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                    }}
+                  >
+                    <p style={{ fontSize: 50, height: 10 }}>PIWO RESTO</p>
+                    <ImageMarked className="MuiImageMarked-root" />
+                  </Typography>
+                </Image>
+              </a>
+            </ImageButton>
+
+            <Box
+              sx={{
+                width: { xs: "100%", md: "100%" },
+                // minHeight: 200,
+              }}
+            >
+              <h2 style={{ color: "#9e9e9e" }}>
+                Cada uno de nuestros sabores nace de una receta única. Cada uno
+                de nuestros sabores nace de una receta única. Cada uno de
+                nuestros sabores nace de una receta única.
+              </h2>
+            </Box>
+          </Grid>
+          {/* 
+          <Box>
+            <ImageButton
+              focusRipple
+              key={piwosalado}
+              sx={{
+                width: { xs: "90%", md: "90%" },
+                minHeight: 200,
+              }}
+            >
+              <a
+                href="https://www.pedidosya.com.uy/restaurantes/montevideo/piwo-resto-menu?category=71&search=piwo"
+                target="_ black"
+              >
+                <ImageSrc style={{ backgroundImage: `url(${piwosalado})` }} />
+                <ImageBackdrop className="MuiImageBackdrop-root" />
+                <Image>
+                  <Typography
+                    component="span"
+                    variant="subtitle1"
+                    color="inherit"
+                    sx={{
+                      position: "relative",
+                      p: 4,
+                      pt: 2,
+                      pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                    }}
+                  >
+                    <p style={{ fontSize: 50, height: 10 }}>PIWO RESTO</p>
+                    <ImageMarked className="MuiImageMarked-root" />
+                  </Typography>
+                </Image>
+              </a>
+            </ImageButton>
+
+            <Box
+              sx={{
+                width: { xs: "90%", md: "90%" },
+                // minHeight: 200,
+              }}
+            >
+              <h2 style={{ color: "#9e9e9e" }}>
+                Cada uno de nuestros sabores nace de una receta única. Cada uno
+                de nuestros sabores nace de una receta única. Cada uno de
+                nuestros sabores nace de una receta única.
+              </h2>
+            </Box>
+          </Box> */}
+        </Grid>
         {/* </div> */}
       </Grid>
 
@@ -738,18 +931,26 @@ function App(props: Props) {
           }}
         >
           <Grid item xs={12} md={5}>
-            <h1 style={{ color: "#2e2e2e", fontSize: 90 }}>NUESTROS LOCALES</h1>
-            <h1 style={{ color: "#9e9e9e" }}>
-              Cada uno de nuestros sabores nace de una receta única. Cada uno de
-              nuestros sabores nace de una receta única. Cada uno de nuestros
-              sabores nace de una receta única.
-            </h1>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <h1 style={{ color: "#2e2e2e", fontSize: 80 }}>
+                NUESTROS LOCALES
+              </h1>
+              <h1 style={{ color: "#9e9e9e" }}>
+                Cada uno de nuestros sabores nace de una receta única. Cada uno
+                de nuestros sabores nace de una receta única. Cada uno de
+                nuestros sabores nace de una receta única.
+              </h1>
+            </motion.div>
           </Grid>
           <Grid item xs={12} md={5} style={{ height: "400px", width: "100%" }}>
             <MapContainer
               center={[-34.904468, -56.176189]}
               zoom={12}
-              style={{ height: "100%", width: "600px" }}
+              style={{ height: "100%", width: "100%" }}
             >
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -817,19 +1018,11 @@ function App(props: Props) {
               <FacebookIcon style={{ fontSize: 40, margin: 10 }} />
             </a>
           </div>
+          <Typography style={{ color: "#cdcdcd" }}>
+            © 2024 Piwo Helados
+          </Typography>
         </div>
       </Grid>
-      {/* <Grid
-          item
-          sx={{
-            backgroundColor: "#D28E31",
-            background: "solid",
-            width: "100vw",
-            height: "400px",
-          }}
-        >
-          Piwo
-        </Grid> */}
     </Grid>
   );
 }
