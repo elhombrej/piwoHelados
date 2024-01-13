@@ -240,7 +240,7 @@ function App(props: Props) {
                 display: { xs: "flex", md: "none" },
               }}
             >
-              <img src={piwologo} width={"150px"} />
+              <img src={piwologo} width={"80px"} />
             </Box>
 
             <Box
@@ -332,7 +332,7 @@ function App(props: Props) {
                   <p
                     style={{
                       margin: 0,
-                      fontSize: 30,
+                      fontSize: 25,
                       color: "#ffffff",
                     }}
                   >
@@ -520,7 +520,7 @@ function App(props: Props) {
           width: "100%",
           height: "400px",
           minHeight: "400px",
-          marginTop: 90,
+          marginTop: 45,
         }}
         sx={{ display: { xs: "block", md: "none" } }}
       >
