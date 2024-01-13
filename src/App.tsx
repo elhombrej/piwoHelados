@@ -663,7 +663,7 @@ function App(props: Props) {
             key={piwocafe}
             sx={{
               width: { xs: "90%", md: "30%" },
-              // minHeight: 200,
+              minHeight: 200,
             }}
           >
             <a
@@ -696,7 +696,7 @@ function App(props: Props) {
             key={piwosalado}
             sx={{
               width: { xs: "90%", md: "30%" },
-              // minHeight: 200,
+              minHeight: 200,
             }}
           >
             <a
