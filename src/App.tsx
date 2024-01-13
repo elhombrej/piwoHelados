@@ -23,10 +23,13 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import { Fade as FadeReveal } from "react-reveal";
-import { styled } from '@mui/material/styles';
-import ButtonBase from '@mui/material/ButtonBase';
+{
+  /* @ts-ignore: Unreachable code error */
+}
 
+import { Fade as FadeReveal } from "react-reveal";
+import { styled } from "@mui/material/styles";
+import ButtonBase from "@mui/material/ButtonBase";
 
 interface Props {
   /**
