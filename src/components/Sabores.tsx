@@ -352,7 +352,7 @@ function Sabores(props: Props) {
                     sx={{ height: 60 }}
                   >
                     <a
-                      href={import.meta.env.VITE_FRONTEND_URL + '/sabores/es'}
+                      href={import.meta.env.VITE_FRONTEND_URL + "/sabores/es"}
                       //   target="_ black"
                       style={{
                         display: "flex",
@@ -576,7 +576,7 @@ function Sabores(props: Props) {
               >
                 <Box
                   sx={{
-                    width: "200px",
+                    width: { xs: "100px", sm: "200px", md: "200px" },
                     height: "auto",
                     borderRadius: 50,
                     overflow: "hidden",
@@ -605,10 +605,10 @@ function Sabores(props: Props) {
                 >
                   <h2 style={{ color: "#9e9e9e" }}>{element.name}</h2>
 
+                </Box>
                   {!element.hasTacc && (
                     <img src={taccLogo} width={25} style={{ marginLeft: 0 }} />
                   )}
-                </Box>
               </Grid>
             );
           })}

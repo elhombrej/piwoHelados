@@ -576,7 +576,7 @@ function SaboresBr(props: Props) {
               >
                 <Box
                   sx={{
-                    width: "200px",
+                    width: { xs: "100px", sm: "200px", md: "200px" },
                     height: "auto",
                     borderRadius: 50,
                     overflow: "hidden",
@@ -604,11 +604,10 @@ function SaboresBr(props: Props) {
                   }}
                 >
                   <h2 style={{ color: "#9e9e9e" }}>{element.name}</h2>
-
-                  {!element.hasTacc && (
-                    <img src={taccLogo} width={25} style={{ marginLeft: 0 }} />
-                  )}
                 </Box>
+                {!element.hasTacc && (
+                  <img src={taccLogo} width={25} style={{ marginLeft: 0 }} />
+                )}
               </Grid>
             );
           })}
