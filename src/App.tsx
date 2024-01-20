@@ -2,7 +2,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
-import NotFound from "./components/NotFound";
+// import NotFound from "./components/NotFound";
 import Sabores from "./components/Sabores";
 
 function App() {
