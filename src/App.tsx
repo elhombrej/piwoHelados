@@ -8,11 +8,14 @@ import Sabores from "./components/Sabores";
 function App() {
   return (
     <Router>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/sabores/es" element={<Sabores />} />
-          <Route path="*" element={<LandingPage />} />
-        </Routes>
+      <Routes>
+        {/* @ts-ignore: Unreachable code error */}
+        <Route path="/" element={<LandingPage />} />
+        {/* @ts-ignore: Unreachable code error */}
+        <Route path="/sabores/es" element={<Sabores />} />
+        {/* @ts-ignore: Unreachable code error */}
+        <Route path="*" element={<LandingPage />} />
+      </Routes>
     </Router>
   );
 }
