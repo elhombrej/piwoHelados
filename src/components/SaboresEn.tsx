@@ -74,38 +74,38 @@ function HideOnScroll(props: Props) {
 }
 
 const flavorsArray = [
-  { name: "Ananá 🍍", image: anana },
-  { name: "Arándanos 🫐", image: arandanos },
+  { name: "Pineapple 🍍", image: anana },
+  { name: "Blueberries 🫐", image: arandanos },
   { name: "Cheesecake 🍰", image: cheesecake },
-  { name: "Chocolate Italiano 🍫", image: chocolateItaliano },
-  { name: "Chocolate Suizo 🍫", image: chocolateSuizo },
+  { name: "Italian Chocolate 🍫", image: chocolateItaliano },
+  { name: "Swiss Chocolate 🍫", image: chocolateSuizo },
   {
-    name: "Crema con Pasas de Uva al Ron 🍇🥃",
+    name: "Cream with Rum-Soaked Raisins 🍇🥃",
     image: cremaConPasasDeUvaAlRon,
   },
-  { name: "Crema Rusa 🍨", image: cremaRusa },
-  { name: "Dulce de Leche Granizado 🐮🍫", image: dulceDeLecheGranizado },
+  { name: "Russian Cream 🍨", image: cremaRusa },
+  { name: "Grated Dulce de Leche 🐮🍫", image: dulceDeLecheGranizado },
   { name: "Ferrero Rocher 🍫", image: ferreroR },
-  { name: "Frambuesa 🍇", image: frambueza },
-  { name: "Frutilla 🍓", image: frutilla },
-  { name: "Frutos Rojos 🍒", image: frutosRojos },
-  { name: "Limón 🍋", image: limon },
+  { name: "Raspberry 🍇", image: frambueza },
+  { name: "Strawberry 🍓", image: frutilla },
+  { name: "Red Berries 🍒", image: frutosRojos },
+  { name: "Lemon 🍋", image: limon },
   { name: "Mantecol 🧈", image: mantecol },
-  { name: "Maracuyá 🥭", image: maracuya },
-  { name: "Menta 🌿", image: menta },
-  { name: "Moka ☕", image: moka },
+  { name: "Passion Fruit 🥭", image: maracuya },
+  { name: "Mint 🌿", image: menta },
+  { name: "Mocha ☕", image: moka },
   { name: "Nutella 🌰", image: nutella },
   { name: "Oreo 🍪", image: oreo, hasTacc: true },
-  { name: "Pistacho 🥜", image: pistacho },
-  { name: "Sambayón con Cereza 🍒", image: sambayonConCereza },
+  { name: "Pistachio 🥜", image: pistacho },
+  { name: "Sambayón with Cherry 🍒", image: sambayonConCereza },
   { name: "Super Dulce de Leche 🐮", image: superDulceDeLeche },
-  { name: "Tiramisú 🍰", image: tiramisu, hasTacc: true },
+  { name: "Tiramisu 🍰", image: tiramisu, hasTacc: true },
   { name: "Tramontana 🍨", image: tramontana, hasTacc: true },
-  { name: "Vainilla 🍦", image: vainilla },
+  { name: "Vanilla 🍦", image: vainilla },
   { name: "Coco Split 🥥🐮", image: cocoSplit },
 ];
 
-function Sabores(props: Props) {
+function SaboresEn(props: Props) {
   const ImageButton = styled(ButtonBase)(({ theme }) => ({
     position: "relative",
     height: 200,
@@ -304,7 +304,7 @@ function Sabores(props: Props) {
                       color: "#ffffff",
                     }}
                   >
-                    🇺🇾 MÁS QUE HELADOS
+                    🇺🇸 MORE THAN ICE CREAM
                   </p>
                   <KeyboardArrowDownIcon sx={{ color: "#ffffff" }} />
                 </IconButton>
@@ -332,7 +332,7 @@ function Sabores(props: Props) {
                       color: "#ffffff",
                     }}
                   >
-                    🇺🇾 MÁS QUE HELADOS
+                    🇺🇸 MORE THAN ICE CREAM
                   </p>
                   <KeyboardArrowDownIcon sx={{ color: "#ffffff" }} />
                 </IconButton>
@@ -352,7 +352,7 @@ function Sabores(props: Props) {
                     sx={{ height: 60 }}
                   >
                     <a
-                      href={import.meta.env.VITE_FRONTEND_URL + '/sabores/es'}
+                      href={import.meta.env.VITE_FRONTEND_URL + "/sabores/es"}
                       //   target="_ black"
                       style={{
                         display: "flex",
@@ -538,10 +538,10 @@ function Sabores(props: Props) {
             textAlign: "center",
           }}
         >
-          <IconButton href="/">
+          <IconButton href="/en">
             <ArrowBackIosIcon sx={{ fontSize: 40, color: "white" }} />
           </IconButton>
-          <h1 style={{ fontSize: 100 }}>Sabores</h1>
+          <h1 style={{ fontSize: 100 }}>FLAVORS</h1>
           <br />
         </Box>
 
@@ -640,7 +640,7 @@ function Sabores(props: Props) {
             width={300}
             // style={{ maxWidth: "100vw" }}
           />
-          <b style={{ color: "#2e2e2e" }}>SEGUINOS!</b>
+          <b style={{ color: "#2e2e2e" }}>FOLLOW US!</b>
           <div
             style={{
               display: "flex",
@@ -656,12 +656,6 @@ function Sabores(props: Props) {
             </a>
           </div>
           <Typography style={{ color: "#cdcdcd" }}>
-            <a href="mailto:info.piwohelados@gmail.com">
-              info.piwohelados@gmail.com
-            </a>
-          </Typography>
-          <br />
-          <Typography style={{ color: "#cdcdcd" }}>
             © 2024 Piwo Helados
           </Typography>
         </div>
@@ -670,4 +664,4 @@ function Sabores(props: Props) {
   );
 }
 
-export default Sabores;
+export default SaboresEn;

@@ -64,7 +64,7 @@ function HideOnScroll(props: Props) {
 
 const images = [piwoheader, piwolocal2, piwojugos, piwolocal1];
 
-function LandingPage(props: Props) {
+function LandingPageBr(props: Props) {
   const ImageButton = styled(ButtonBase)(({ theme }) => ({
     position: "relative",
     height: 200,
@@ -315,7 +315,7 @@ function LandingPage(props: Props) {
                       color: "#ffffff",
                     }}
                   >
-                    🇺🇾 MÁS QUE HELADOS
+                    🇧🇷 MAIS QUE GELADO
                   </p>
                   <KeyboardArrowDownIcon sx={{ color: "#ffffff" }} />
                 </IconButton>
@@ -343,7 +343,7 @@ function LandingPage(props: Props) {
                       color: "#ffffff",
                     }}
                   >
-                    🇺🇾 MÁS QUE HELADOS
+                    🇧🇷 MAIS QUE GELADO
                   </p>
                   <KeyboardArrowDownIcon sx={{ color: "#ffffff" }} />
                 </IconButton>
@@ -542,9 +542,9 @@ function LandingPage(props: Props) {
                 padding: 40,
               }}
             >
-              Piwo es una empresa Uruguaya especializada en la fabricacién de
-              helados y jugos naturales ademas contamos con una aplia linea de
-              cafeteria, reposteria y comidas saladas.
+              A Piwo é uma empresa uruguaia especializada na fabricação de
+              sorvetes e sucos naturais, além de oferecer uma ampla linha de
+              cafeteria, confeitaria e pratos salgados.
             </p>
             <div>
               <img src={images[3]} />
@@ -563,9 +563,9 @@ function LandingPage(props: Props) {
                 padding: 40,
               }}
             >
-              De una muy surtida carta de sabores, destacan nuestras propuestas
-              sin azucar, opciones veganas, y gustos originales como el de
-              Fernet, el de Cerveza, Maracuya, Nutella.
+              De um cardápio muito diversificado de sabores, destacam-se nossas
+              opções sem açúcar, opções veganas e sabores originais como Fernet,
+              Cerveja, Maracujá, Nutella.
             </p>
           </div>
           <div className="each-slide">
@@ -577,10 +577,10 @@ function LandingPage(props: Props) {
                 padding: 40,
               }}
             >
-              El helado Tailandés, es una técnica innovadora sobre el helado
-              artesanal, que implica la elaboracién del helado en el momento
-              sobre la base de una crema americana o base de chocolate,
-              disponible en Eco Parque Villa Dolores.
+              O sorvete tailandês é uma técnica inovadora no sorvete artesanal,
+              que envolve a produção do sorvete no momento com base em uma creme
+              americano ou base de chocolate, disponível no Eco Parque Villa
+              Dolores.
             </p>
             <div>
               <img src={images[1]} />
@@ -598,10 +598,10 @@ function LandingPage(props: Props) {
                 padding: 40,
               }}
             >
-              Al igual que en nuestro local, el Food truck de Piwo utiliza vasos
-              reciclables, tanto para los productos de heladeria como de
-              cafeteria de la marca Darnel Group (productos 100% reciclables,
-              biodegradables o compostables).
+              Assim como em nossa loja, o Food Truck da Piwo utiliza copos
+              recicláveis, tanto para os produtos de sorveteria quanto para a
+              cafeteria da marca Darnel Group (produtos 100% recicláveis,
+              biodegradáveis ou compostáveis).
             </p>
           </div>
         </Fade>
@@ -686,7 +686,6 @@ function LandingPage(props: Props) {
       <Grid
         item
         // padding={50}
-
         style={{
           display: "flex",
           flexDirection: "row",
@@ -718,15 +717,15 @@ function LandingPage(props: Props) {
                 <h1
                   style={{ fontSize: 60, fontWeight: "bold", color: "#2e2e2e" }}
                 >
-                  HELADOS
+                  GELADOS
                 </h1>
 
                 {/* <Button variant="text" size="large"> */}
                 <p style={{ color: "#9e9e9e", fontSize: 25 }}>
-                  Aplicamos el 'Know How' de la fabricacion del
-                  <b> helado artesanal Italiano</b> a travez de maquinarias,
-                  tecnicas y una distinguida formacion de nuestro{" "}
-                  <b>maestro heladero</b>.
+                  Aplicamos o 'Know How' da fabricação do
+                  <b> sorvete artesanal italiano</b> através de maquinarias,
+                  técnicas e uma formação distinta do nosso{" "}
+                  <b>mestre sorveteiro</b>.
                 </p>
 
                 <div
@@ -738,7 +737,7 @@ function LandingPage(props: Props) {
                   }}
                 >
                   {/* <Button variant="text" size="large"> */}
-                  <a href="/sabores/es" style={{ fontSize: 50 }}>
+                  <a href="/sabores/br" style={{ fontSize: 50 }}>
                     VER SABORES
                   </a>
                   {/* </Button> */}
@@ -764,15 +763,15 @@ function LandingPage(props: Props) {
                 <h1
                   style={{ fontSize: 60, fontWeight: "bold", color: "#2e2e2e" }}
                 >
-                  JUGOS
+                  SUCOS
                 </h1>
 
                 {/* <Button variant="text" size="large"> */}
                 <p style={{ color: "#9e9e9e", fontSize: 25 }}>
-                  Nuestros jugos están endulzados con <b>Stevia</b> y son de
-                  origen y elaborados de forma
-                  <b> 100% natural</b>. No contienen{" "}
-                  <b>colorantes, conservantes, ni azúcares</b>.
+                  Nossos sucos são adoçados com <b>Stevia</b> e são de origem e
+                  elaborados de forma
+                  <b> 100% natural</b>. Não contêm{" "}
+                  <b>corantes, conservantes, nem açúcares</b>.
                 </p>
 
                 <div
@@ -785,8 +784,8 @@ function LandingPage(props: Props) {
                 >
                   {/* <Button variant="text" size="large"> */}
                   {/* <a href="/" style={{ fontSize: 50 }}>
-                    VER SABORES
-                  </a> */}
+                            VER SABORES
+                        </a> */}
                   {/* </Button> */}
                 </div>
               </Box>
@@ -811,14 +810,14 @@ function LandingPage(props: Props) {
                 <h1
                   style={{ fontSize: 60, fontWeight: "bold", color: "#2e2e2e" }}
                 >
-                  BATIDOS
+                  VITAMINADOS
                 </h1>
 
                 {/* <Button variant="text" size="large"> */}
                 <p style={{ color: "#9e9e9e", fontSize: 25 }}>
-                  Seleccion de las mejores <b>frutas de estacion</b> para
-                  nuestros batidos, milkshakes o <b>milkshakes con helado</b>{" "}
-                  elaborados en el momento.
+                  Seleção das melhores <b>frutas da estação</b> para nossos
+                  vitaminados, milkshakes ou <b>milkshakes com sorvete</b>{" "}
+                  elaborados no momento.
                 </p>
 
                 <div
@@ -831,8 +830,8 @@ function LandingPage(props: Props) {
                 >
                   {/* <Button variant="text" size="large"> */}
                   {/* <a href="/" style={{ fontSize: 50 }}>
-                    VER SABORES
-                  </a> */}
+                            VER SABORES
+                        </a> */}
                   {/* </Button> */}
                 </div>
               </Box>
@@ -859,13 +858,13 @@ function LandingPage(props: Props) {
               transition={{ duration: 1 }}
             >
               <h1 style={{ color: "#2e2e2e", fontSize: 80 }}>
-                CAFETERIA DE ESPECIALIDAD
+                CAFETERIA DE ESPECIALIDADE
               </h1>
               <p style={{ color: "#9e9e9e", fontSize: 35 }}>
-                Trabajamos con la marca de <b> Cafés de especialidad</b> mas
-                reconocida de Colombia, <b> Amor Perfecto</b>. Contamos con
-                <b> baristas profesionales</b> para servir el mejor café en sus
-                distintas versiones.
+                Trabalhamos com a marca de <b>Cafés de Especialidade</b> mais
+                reconhecida da Colômbia, <b>Amor Perfecto</b>. Contamos com
+                <b>baristas profissionais</b> para servir o melhor café em suas
+                diferentes versões.
               </p>
             </motion.div>
           </Grid>
@@ -882,7 +881,7 @@ function LandingPage(props: Props) {
               style={{
                 borderRadius: 10,
                 boxShadow: "0px 5px 5px rgba(0, 0, 0, 0.5)",
-                objectFit: "cover", // Añade esta propiedad
+                objectFit: "cover", // Adicione esta propriedade
                 background: "solid",
                 backgroundSize: "cover",
                 // backgroundPosition: "absolute",
@@ -923,7 +922,7 @@ function LandingPage(props: Props) {
               style={{
                 borderRadius: 10,
                 boxShadow: "0px 5px 5px rgba(0, 0, 0, 0.5)",
-                objectFit: "cover", // Añade esta propiedad
+                objectFit: "cover", // Adicione esta propriedade
                 background: "solid",
                 backgroundSize: "cover",
                 // backgroundPosition: "absolute",
@@ -938,12 +937,12 @@ function LandingPage(props: Props) {
               transition={{ duration: 1 }}
             >
               <h1 style={{ color: "#2e2e2e", fontSize: 80 }}>
-                PASTELERIA A TODA HORA
+                PASTELARIA A QUALQUER HORA
               </h1>
               <p style={{ color: "#9e9e9e", fontSize: 35 }}>
-                La línea de <b> postres DOMUM</b> es elaborada de forma casera,
-                combinando diferentes elementos que hacen de su sabor, textura y
-                color una <b>exquisita experiencia</b>.
+                A linha de <b>sobremesas DOMUM</b> é elaborada de forma caseira,
+                combinando diferentes elementos que tornam seu sabor, textura e
+                cor uma <b>experiência requintada</b>.
               </p>
             </motion.div>
           </Grid>
@@ -964,7 +963,7 @@ function LandingPage(props: Props) {
               style={{
                 borderRadius: 10,
                 boxShadow: "0px 5px 5px rgba(0, 0, 0, 0.5)",
-                objectFit: "cover", // Añade esta propiedad
+                objectFit: "cover", // Adicione esta propriedade
                 background: "solid",
                 backgroundSize: "cover",
                 // backgroundPosition: "absolute",
@@ -1018,7 +1017,7 @@ function LandingPage(props: Props) {
             >
               <a
                 href="https://www.pedidosya.com.uy/restaurantes/montevideo/piwo-cafe-menu?category=71&search=piwo"
-                target="_ black"
+                target="_black"
               >
                 <ImageSrc style={{ backgroundImage: `url(${piwocafe})` }} />
                 <ImageBackdrop className="MuiImageBackdrop-root" />
@@ -1048,8 +1047,8 @@ function LandingPage(props: Props) {
               }}
             >
               <p style={{ color: "#9e9e9e", fontSize: 35 }}>
-                Una extensa carta de <b> CAFETERIA</b> y delicias<b> DULCES</b>{" "}
-                disponible para llevar online.
+                Um extenso cardápio de <b>CAFETERIA</b> e delícias <b>DOCES</b>{" "}
+                disponíveis para pedir online.
               </p>
             </Box>
           </Grid>
@@ -1065,7 +1064,7 @@ function LandingPage(props: Props) {
             >
               <a
                 href="https://www.pedidosya.com.uy/restaurantes/montevideo/piwo-resto-menu?category=71&search=piwo"
-                target="_ black"
+                target="_black"
               >
                 <ImageSrc style={{ backgroundImage: `url(${piwosalado})` }} />
                 <ImageBackdrop className="MuiImageBackdrop-root" />
@@ -1095,61 +1094,12 @@ function LandingPage(props: Props) {
               }}
             >
               <p style={{ color: "#9e9e9e", fontSize: 35 }}>
-                Una extensa carta de platos<b> SALADOS</b> y <b> BEBIDAS</b>{" "}
-                disponible para llevar online.
+                Um extenso cardápio de pratos <b>SALGADOS</b> e <b>BEBIDAS</b>{" "}
+                disponíveis para pedir online.
               </p>
             </Box>
           </Grid>
-          {/* 
-          <Box>
-            <ImageButton
-              focusRipple
-              key={piwosalado}
-              sx={{
-                width: { xs: "90%", md: "90%" },
-                minHeight: 200,
-              }}
-            >
-              <a
-                href="https://www.pedidosya.com.uy/restaurantes/montevideo/piwo-resto-menu?category=71&search=piwo"
-                target="_ black"
-              >
-                <ImageSrc style={{ backgroundImage: `url(${piwosalado})` }} />
-                <ImageBackdrop className="MuiImageBackdrop-root" />
-                <Image>
-                  <Typography
-                    component="span"
-                    variant="subtitle1"
-                    color="inherit"
-                    sx={{
-                      position: "relative",
-                      p: 4,
-                      pt: 2,
-                      pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
-                    }}
-                  >
-                    <p style={{ fontSize: 50, height: 10 }}>PIWO RESTO</p>
-                    <ImageMarked className="MuiImageMarked-root" />
-                  </Typography>
-                </Image>
-              </a>
-            </ImageButton>
-
-            <Box
-              sx={{
-                width: { xs: "90%", md: "90%" },
-                // minHeight: 200,
-              }}
-            >
-              <h2 style={{ color: "#9e9e9e" }}>
-                Cada uno de nuestros sabores nace de una receta única. Cada uno
-                de nuestros sabores nace de una receta única. Cada uno de
-                nuestros sabores nace de una receta única.
-              </h2>
-            </Box>
-          </Box> */}
         </Grid>
-        {/* </div> */}
       </Grid>
 
       <Grid
@@ -1171,14 +1121,11 @@ function LandingPage(props: Props) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              <h1 style={{ color: "#2e2e2e", fontSize: 80 }}>
-                NUESTROS LOCALES
-              </h1>
+              <h1 style={{ color: "#2e2e2e", fontSize: 80 }}>NOSSAS LOJAS</h1>
               <p style={{ color: "#9e9e9e", fontSize: 35 }}>
-                Estamos instalados con nuestro local comercial en la{" "}
-                <b> Peatonal Sarandi 340</b> de la Ciudad Vieja y nuestro Food
-                Truck en la Plaza de Comidas de <b> Eco Parque Villa Dolores</b>
-                .
+                Estamos instalados com nossa loja comercial na{" "}
+                <b>Peatonal Sarandi 340</b> na Ciudad Vieja e nosso Food Truck
+                na Praça de Alimentação do <b>Eco Parque Villa Dolores</b>.
               </p>
             </motion.div>
           </Grid>
@@ -1240,7 +1187,7 @@ function LandingPage(props: Props) {
             width={300}
             // style={{ maxWidth: "100vw" }}
           />
-          <b style={{ color: "#2e2e2e" }}>SEGUINOS!</b>
+          <b style={{ color: "#2e2e2e" }}>SIGA-NOS!</b>
           <div
             style={{
               display: "flex",
@@ -1248,10 +1195,10 @@ function LandingPage(props: Props) {
               alignItems: "center",
             }}
           >
-            <a href="https://www.instagram.com/piwohelados" target="_ black">
+            <a href="https://www.instagram.com/piwohelados" target="_black">
               <InstagramIcon style={{ fontSize: 40, margin: 10 }} />
             </a>
-            <a href="https://www.facebook.com/piwohelados" target="_ black">
+            <a href="https://www.facebook.com/piwohelados" target="_black">
               <FacebookIcon style={{ fontSize: 40, margin: 10 }} />
             </a>
           </div>
@@ -1270,4 +1217,4 @@ function LandingPage(props: Props) {
   );
 }
 
-export default LandingPage;
+export default LandingPageBr;
