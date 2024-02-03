@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Grid, IconButton } from "@mui/material";
+import { Box, Button, Grid, IconButton } from "@mui/material";
 import piwologocolor from "../images/piwologocolor.png";
 import piwologo from "../images/piwologo.png";
 import pedidosyalogo from "../images/pedidosya.svg";
@@ -739,7 +739,7 @@ function LandingPage(props: Props) {
                 >
                   {/* <Button variant="text" size="large"> */}
                   <a href="/sabores/es" style={{ fontSize: 50 }}>
-                    VER SABORES
+                    {`VER SABORES>`}
                   </a>
                   {/* </Button> */}
                 </div>
@@ -784,9 +784,9 @@ function LandingPage(props: Props) {
                   }}
                 >
                   {/* <Button variant="text" size="large"> */}
-                  {/* <a href="/" style={{ fontSize: 50 }}>
-                    VER SABORES
-                  </a> */}
+                  <a href="/jugos/es" style={{ fontSize: 50 }}>
+                    {`VER SABORES>`}
+                  </a>
                   {/* </Button> */}
                 </div>
               </Box>
@@ -873,16 +873,16 @@ function LandingPage(props: Props) {
             item
             xs={12}
             md={5}
-            sx={{ height: { xs: "500px", md: "500px" }, width: "auto" }}
+            sx={{ height: { xs: "400px", md: "500px" }, width: "auto" }}
           >
             <img
               src={barista}
               width={"100%"}
               height={"100%"}
               style={{
-                borderRadius: 10,
-                boxShadow: "0px 5px 5px rgba(0, 0, 0, 0.5)",
-                objectFit: "cover", // Añade esta propiedad
+                // borderRadius: 10,
+                // boxShadow: "0px 5px 5px rgba(0, 0, 0, 0.5)",
+                objectFit: "cover",
                 background: "solid",
                 backgroundSize: "cover",
                 // backgroundPosition: "absolute",
@@ -921,9 +921,9 @@ function LandingPage(props: Props) {
               width={"100%"}
               height={"100%"}
               style={{
-                borderRadius: 10,
-                boxShadow: "0px 5px 5px rgba(0, 0, 0, 0.5)",
-                objectFit: "cover", // Añade esta propiedad
+                // borderRadius: 10,
+                // boxShadow: "0px 5px 5px rgba(0, 0, 0, 0.5)",
+                objectFit: "cover", //
                 background: "solid",
                 backgroundSize: "cover",
                 // backgroundPosition: "absolute",
@@ -952,7 +952,7 @@ function LandingPage(props: Props) {
             xs={12}
             md={5}
             sx={{
-              height: { xs: "500px", md: "500px" },
+              height: { xs: "500px", md: "450px" },
               width: "auto",
               display: { xs: "flex", md: "none" },
             }}
@@ -962,8 +962,8 @@ function LandingPage(props: Props) {
               width={"100%"}
               height={"100%"}
               style={{
-                borderRadius: 10,
-                boxShadow: "0px 5px 5px rgba(0, 0, 0, 0.5)",
+                // borderRadius: 10,
+                // boxShadow: "0px 5px 5px rgba(0, 0, 0, 0.5)",
                 objectFit: "cover", // Añade esta propiedad
                 background: "solid",
                 backgroundSize: "cover",
@@ -1047,7 +1047,7 @@ function LandingPage(props: Props) {
                 // minHeight: 200,
               }}
             >
-              <p style={{ color: "#9e9e9e", fontSize: 35 }}>
+              <p style={{ color: "black", fontSize: 35 }}>
                 Una extensa carta de <b> CAFETERIA</b> y delicias<b> DULCES</b>{" "}
                 disponible para llevar online.
               </p>
@@ -1094,7 +1094,7 @@ function LandingPage(props: Props) {
                 // minHeight: 200,
               }}
             >
-              <p style={{ color: "#9e9e9e", fontSize: 35 }}>
+              <p style={{ color: "black", fontSize: 35 }}>
                 Una extensa carta de platos<b> SALADOS</b> y <b> BEBIDAS</b>{" "}
                 disponible para llevar online.
               </p>

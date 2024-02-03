@@ -8,6 +8,7 @@ import SaboresEn from "./components/SaboresEn";
 import SaboresBr from "./components/SaboresBr";
 import LandingPageBr from "./components/LandingPageBr";
 import LandingPageEn from "./components/LandingPageEn";
+import Jugos from "./components/Jugos";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Route path="/en" element={<LandingPageEn />} />
         {/* @ts-ignore: Unreachable code error */}
         <Route path="/sabores/es" element={<Sabores />} />
+        {/* @ts-ignore: Unreachable code error */}
+        <Route path="/jugos/es" element={<Jugos />} />
         {/* @ts-ignore: Unreachable code error */}
         <Route path="/sabores/br" element={<SaboresBr />} />
         {/* @ts-ignore: Unreachable code error */}
