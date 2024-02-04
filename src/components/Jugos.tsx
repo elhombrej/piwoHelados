@@ -554,7 +554,7 @@ function Jugos(props: Props) {
                     width: "100%",
                     display: "flex",
                     flexDirection: "column",
-                    alignItems: { xs: "flex-start", md: "flex-start" },
+                    alignItems: { xs: "center", md: "flex-start" },
                     justifyContent: "center",
                     marginBottom: 5,
                   }}
@@ -565,7 +565,7 @@ function Jugos(props: Props) {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      flexDirection: "row",
+                      flexDirection: { xs: "column", md: "row" },
                       gap: 2,
                       // flexWrap: "wrap",
                     }}
