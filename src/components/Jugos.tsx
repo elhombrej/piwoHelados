@@ -2,7 +2,6 @@ import * as React from "react";
 import { Box, Grid, IconButton } from "@mui/material";
 import piwologocolor from "../images/piwologocolor.png";
 import piwologo from "../images/piwologo.png";
-import piwosalado from "../images/piwosalado.png";
 import anana from "../images/iceCreamFlavors/anana.jpg";
 import arandanos from "../images/iceCreamFlavors/arandanos.jpg";
 import cheesecake from "../images/iceCreamFlavors/cheesecake.jpg";
@@ -18,21 +17,9 @@ import frutosRojos from "../images/iceCreamFlavors/frutosRojos.jpg";
 import limon from "../images/iceCreamFlavors/limon.jpg";
 import mantecol from "../images/iceCreamFlavors/mantecol.jpg";
 import maracuya from "../images/iceCreamFlavors/maracuya.jpg";
-import menta from "../images/iceCreamFlavors/menta.jpg";
-import moka from "../images/iceCreamFlavors/moka.jpg";
-import nutella from "../images/iceCreamFlavors/nutella.jpg";
-import oreo from "../images/iceCreamFlavors/oreo.jpg";
-import pistacho from "../images/iceCreamFlavors/pistacho.jpg";
-import sambayonConCereza from "../images/iceCreamFlavors/sambayonConCereza.jpg";
-import superDulceDeLeche from "../images/iceCreamFlavors/superDulceDeLeche.jpg";
-import tiramisu from "../images/iceCreamFlavors/tiramisu.jpg";
-import tramontana from "../images/iceCreamFlavors/tramontana.jpg";
-import vainilla from "../images/iceCreamFlavors/vainilla.jpg";
-import cocoSplit from "../images/iceCreamFlavors/cocoSplit.jpg";
-import taccLogo from "../images/sinTacc.png";
 import piwojugos from "/piwojugos.png";
-import piwociudadvieja from "../images/piwociudadvieja.jpg";
-import piwovilladolores from "../images/piwovilladolores.png";
+import bottleOrange from "/bottleOrange.png";
+import bottleLemon from "/bottleLemon.png";
 import "./App.css";
 import AppBar from "@mui/material/AppBar";
 import Typography from "@mui/material/Typography";
@@ -41,8 +28,6 @@ import Slide from "@mui/material/Slide";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { styled } from "@mui/material/styles";
-import ButtonBase from "@mui/material/ButtonBase";
-import "leaflet/dist/leaflet.css";
 import Menu, { MenuProps } from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -76,21 +61,25 @@ function HideOnScroll(props: Props) {
 }
 
 const flavorsArray = [
-  { name: "Durazno", image: anana, icons: "🍑" },
-  { name: "Frutilla", image: arandanos, icons: "🍓" },
-  { name: "Naranja", image: cheesecake, icons: "🍊" },
-  { name: "Limon con Jengibre y Menta", image: chocolateItaliano, icons: "🍋" },
-  { name: "Zanahoria Con Naranja", image: chocolateSuizo, icons: "🥕🍊" },
-  { name: "Naranja Con Banana", image: cremaConPasasDeUvaAlRon, icons: "🍊🍌" },
-  { name: "Anana", image: cremaRusa, icons: "🍍" },
-  { name: "Mango", image: dulceDeLecheGranizado, icons: "🥭" },
-  { name: "Arandanos Con Frutilla", image: ferreroR, icons: "🫐🍓" },
-  { name: "Maracuya Con Mango", image: frambueza, icons: "🥭" },
-  { name: "Apio Con Manzana Verde", image: frutilla, icons: "🥬🍏" },
-  { name: "Naranja y Jengibre", image: frutosRojos, icons: "🍊🧊" },
-  { name: "Espinaca con Kiwi", image: limon, icons: "🥝" },
-  { name: "Naranja y Jengibre", image: mantecol, icons: "🍊🧊" },
-  { name: "Remolacha con Naranja y Zanahoria", image: maracuya, icons: "🥕🍊" },
+  { name: "Durazno", image: bottleOrange, icons: "🍑" },
+  { name: "Frutilla", image: bottleOrange, icons: "🍓" },
+  { name: "Naranja", image: bottleOrange, icons: "🍊" },
+  { name: "Limon con Jengibre y Menta", image: bottleLemon, icons: "🍋" },
+  { name: "Zanahoria Con Naranja", image: bottleOrange, icons: "🥕 🍊" },
+  { name: "Naranja Con Banana", image: bottleOrange, icons: "🍊 🍌" },
+  { name: "Anana", image: bottleOrange, icons: "🍍" },
+  { name: "Mango", image: bottleOrange, icons: "🥭" },
+  { name: "Arandanos Con Frutilla", image: bottleOrange, icons: "🫐 🍓" },
+  { name: "Maracuya Con Mango", image: bottleOrange, icons: "🥭" },
+  { name: "Apio Con Manzana Verde", image: bottleOrange, icons: "🥬 🍏" },
+  { name: "Naranja y Jengibre", image: bottleOrange, icons: "🍊 🫚" },
+  { name: "Espinaca con Kiwi", image: bottleLemon, icons: "🥝" },
+  { name: "Naranja y Jengibre", image: bottleOrange, icons: "🍊 🫚" },
+  {
+    name: "Remolacha con Naranja y Zanahoria",
+    image: bottleOrange,
+    icons: "🥕 🍊",
+  },
 ];
 
 function Jugos(props: Props) {
@@ -582,7 +571,7 @@ function Jugos(props: Props) {
                     }}
                   >
                     <Box>
-                      <img src={piwojugos} width={"150px"} />
+                      <img src={element.image} width={300} />
                     </Box>
                     <Box
                       sx={{

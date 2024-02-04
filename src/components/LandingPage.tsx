@@ -39,6 +39,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { divIcon } from "leaflet";
 import { renderToString } from "react-dom/server";
 import backImg from "/back.png";
+import shake from "/shake.png";
 
 interface Props {
   /**
@@ -746,10 +747,10 @@ function LandingPage(props: Props) {
           style={{
             display: "flex",
             flexDirection: "row",
-            paddingRight: 10,
-            paddingLeft: 10,
+            paddingRight: 5,
+            paddingLeft: 5,
             paddingTop: 50,
-            paddingBottom: 10,
+            paddingBottom: 30,
             // background: "linear-gradient(to top, #ffffff, #adceed)",
           }}
         >
@@ -925,7 +926,7 @@ function LandingPage(props: Props) {
                     }}
                   >
                     {/* <a href="/batidos/es"> */}
-                    {/* <ImageSrc style={{ backgroundImage: `url(${vainilla})` }} /> */}
+                    <ImageSrc style={{ backgroundImage: `url(${shake})` }} />
                     <Image>
                       <p
                         style={{
@@ -946,7 +947,7 @@ function LandingPage(props: Props) {
                     style={{ color: "#6e6e6e", fontSize: 35, fontWeight: 500 }}
                   >
                     Seleccion de las mejores <b>frutas de estacion</b> para
-                    nuestros batidos, milkshakes o <b>milkshakes con helado</b>{" "}
+                    nuestros batidos, licuados o <b>milkshakes con helado</b>{" "}
                     elaborados en el momento.
                   </p>
 
@@ -977,8 +978,9 @@ function LandingPage(props: Props) {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-evenly",
-              paddingRight: 10,
-              paddingLeft: 10,
+              paddingRight: 5,
+              paddingLeft: 5,
+              paddingBottom: 10,
             }}
           >
             <Grid item xs={12} md={5}>
@@ -1028,8 +1030,8 @@ function LandingPage(props: Props) {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-evenly",
-              paddingRight: 10,
-              paddingLeft: 10,
+              paddingRight: 5,
+              paddingLeft: 5,
               paddingBottom: 10,
             }}
           >
@@ -1058,6 +1060,7 @@ function LandingPage(props: Props) {
                 }}
               />
             </Grid>{" "}
+
             <Grid item xs={12} md={5}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -1294,7 +1297,9 @@ function LandingPage(props: Props) {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-evenly",
-              padding: 10,
+              paddingRight: 5,
+              paddingLeft: 5,
+              paddingBottom: 10,
             }}
           >
             <Grid item xs={12} md={5}>
