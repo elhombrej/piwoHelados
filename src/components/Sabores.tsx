@@ -245,7 +245,7 @@ function Sabores(props: Props) {
                   display: { xs: "flex", md: "none" },
                 }}
               >
-                <img src={piwologo} width={"80px"} />
+                <img src={piwologo} width={"80px"} loading="lazy" />
               </Box>
 
               <Box
@@ -306,7 +306,7 @@ function Sabores(props: Props) {
                   margin: 0,
                 }}
               >
-                <img src={piwologo} width={"150px"} />
+                <img src={piwologo} width={"150px"} loading="lazy" />
               </Box>
               <Box
                 sx={{
@@ -639,7 +639,7 @@ function Sabores(props: Props) {
                         color: "#6e6e6e",
                         fontSize: 35,
                         fontWeight: 500,
-                        padding:10
+                        padding: 10,
                       }}
                     >
                       {element.name}
@@ -647,7 +647,12 @@ function Sabores(props: Props) {
                     <div>{element.icons}</div>
                   </Box>
                   {!element.hasTacc && (
-                    <img src={taccLogo} width={25} style={{ marginLeft: 0 }} />
+                    <img
+                      src={taccLogo}
+                      width={25}
+                      style={{ marginLeft: 0 }}
+                      loading="lazy"
+                    />
                   )}
                 </Grid>
               );
@@ -679,6 +684,7 @@ function Sabores(props: Props) {
               alt=""
               width={300}
               // style={{ maxWidth: "100vw" }}
+              loading="lazy"
             />
             <b style={{ color: "#2e2e2e" }}>SEGUINOS!</b>
             <div

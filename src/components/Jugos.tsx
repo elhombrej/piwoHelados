@@ -19,7 +19,12 @@ import mantecol from "../images/iceCreamFlavors/mantecol.jpg";
 import maracuya from "../images/iceCreamFlavors/maracuya.jpg";
 import piwojugos from "/piwojugos.png";
 import bottleOrange from "/bottleOrange.png";
+import bottleLightOrange from "/bottleLightOrange.png";
 import bottleLemon from "/bottleLemon.png";
+import bottleGreen from "/bottleGreen.png";
+import bottlePurple from "/bottlePurple.png";
+import bottleYellow from "/bottleYellow.png";
+import bottleRed from "/bottleRed.png";
 import "./App.css";
 import AppBar from "@mui/material/AppBar";
 import Typography from "@mui/material/Typography";
@@ -61,20 +66,19 @@ function HideOnScroll(props: Props) {
 }
 
 const flavorsArray = [
-  { name: "Durazno", image: bottleOrange, icons: "🍑" },
-  { name: "Frutilla", image: bottleOrange, icons: "🍓" },
+  { name: "Durazno", image: bottleLightOrange, icons: "🍑" },
+  { name: "Frutilla", image: bottleRed, icons: "🍓" },
   { name: "Naranja", image: bottleOrange, icons: "🍊" },
   { name: "Limon con Jengibre y Menta", image: bottleLemon, icons: "🍋" },
   { name: "Zanahoria Con Naranja", image: bottleOrange, icons: "🥕 🍊" },
-  { name: "Naranja Con Banana", image: bottleOrange, icons: "🍊 🍌" },
-  { name: "Anana", image: bottleOrange, icons: "🍍" },
-  { name: "Mango", image: bottleOrange, icons: "🥭" },
-  { name: "Arandanos Con Frutilla", image: bottleOrange, icons: "🫐 🍓" },
-  { name: "Maracuya Con Mango", image: bottleOrange, icons: "🥭" },
-  { name: "Apio Con Manzana Verde", image: bottleOrange, icons: "🥬 🍏" },
-  { name: "Naranja y Jengibre", image: bottleOrange, icons: "🍊 🫚" },
+  { name: "Naranja Con Banana", image: bottleLightOrange, icons: "🍊 🍌" },
+  { name: "Anana", image: bottleYellow, icons: "🍍" },
+  { name: "Mango", image: bottleYellow, icons: "🥭" },
+  { name: "Arandanos Con Frutilla", image: bottlePurple, icons: "🫐 🍓" },
+  { name: "Maracuya Con Mango", image: bottleYellow, icons: "🥭" },
+  { name: "Apio Con Manzana Verde", image: bottleGreen, icons: "🥬 🍏" },
+  { name: "Naranja y Jengibre", image: bottleLightOrange, icons: "🍊 🫚" },
   { name: "Espinaca con Kiwi", image: bottleLemon, icons: "🥝" },
-  { name: "Naranja y Jengibre", image: bottleOrange, icons: "🍊 🫚" },
   {
     name: "Remolacha con Naranja y Zanahoria",
     image: bottleOrange,
@@ -185,7 +189,7 @@ function Jugos(props: Props) {
                   display: { xs: "flex", md: "none" },
                 }}
               >
-                <img src={piwologo} width={"80px"} />
+                <img src={piwologo} width={"80px"} loading="lazy" />
               </Box>
 
               <Box
@@ -246,7 +250,7 @@ function Jugos(props: Props) {
                   margin: 0,
                 }}
               >
-                <img src={piwologo} width={"150px"} />
+                <img src={piwologo} width={"150px"} loading="lazy" />
               </Box>
               <Box
                 sx={{
@@ -571,7 +575,7 @@ function Jugos(props: Props) {
                     }}
                   >
                     <Box>
-                      <img src={element.image} width={300} />
+                      <img src={element.image} width={300} loading="lazy" />
                     </Box>
                     <Box
                       sx={{
@@ -625,6 +629,7 @@ function Jugos(props: Props) {
               alt=""
               width={300}
               // style={{ maxWidth: "100vw" }}
+              loading="lazy"
             />
             <b style={{ color: "#2e2e2e" }}>SEGUINOS!</b>
             <div

@@ -268,7 +268,7 @@ function LandingPage(props: Props) {
                   display: { xs: "flex", md: "none" },
                 }}
               >
-                <img src={piwologo} width={"80px"} />
+                <img src={piwologo} width={"80px"} loading="lazy" />
               </Box>
 
               <Box
@@ -329,7 +329,7 @@ function LandingPage(props: Props) {
                   margin: 0,
                 }}
               >
-                <img src={piwologo} width={"150px"} />
+                <img src={piwologo} width={"150px"} loading="lazy" />
               </Box>
               <Box
                 sx={{
@@ -604,13 +604,13 @@ function LandingPage(props: Props) {
                 cafeteria, reposteria y comidas saladas.
               </p>
               <div>
-                <img src={images[3]} />
+                <img src={images[3]} loading="lazy" />
               </div>
             </div>
 
             <div className="each-slide">
               <div>
-                <img src={images[0]} />
+                <img src={images[0]} loading="lazy" />
               </div>
               <p
                 style={{
@@ -640,12 +640,12 @@ function LandingPage(props: Props) {
                 disponible en Eco Parque Villa Dolores.
               </p>
               <div>
-                <img src={images[1]} />
+                <img src={images[1]} loading="lazy" />
               </div>
             </div>
             <div className="each-slide">
               <div>
-                <img src={images[2]} />
+                <img src={images[2]} loading="lazy" />
               </div>
               <p
                 style={{
@@ -1015,6 +1015,7 @@ function LandingPage(props: Props) {
                   background: "solid",
                   backgroundSize: "cover",
                 }}
+                loading="lazy"
               />
             </Grid>{" "}
           </Grid>
@@ -1046,6 +1047,7 @@ function LandingPage(props: Props) {
               }}
             >
               <img
+                loading="lazy"
                 src={cakes}
                 width={"100%"}
                 height={"100%"}
@@ -1060,7 +1062,6 @@ function LandingPage(props: Props) {
                 }}
               />
             </Grid>{" "}
-
             <Grid item xs={12} md={5}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -1093,6 +1094,7 @@ function LandingPage(props: Props) {
               }}
             >
               <img
+                loading="lazy"
                 src={cakes}
                 width={"100%"}
                 height={"100%"}
@@ -1126,7 +1128,7 @@ function LandingPage(props: Props) {
             flexDirection: "column",
           }}
         >
-          <img src={pedidosyalogo} alt="" width={300} />
+          <img loading="lazy" src={pedidosyalogo} alt="" width={300} />
 
           <Grid
             container
@@ -1343,6 +1345,7 @@ function LandingPage(props: Props) {
                   >
                     <Popup>
                       <img
+                        loading="lazy"
                         src={piwologocolor}
                         width={"100%"}
                         // style={{ borderRadius: 50 }}
@@ -1380,6 +1383,7 @@ function LandingPage(props: Props) {
               src={piwologocolor}
               alt=""
               width={300}
+              loading="lazy"
               // style={{ maxWidth: "100vw" }}
             />
             <b style={{ color: "#2e2e2e" }}>SEGUINOS!</b>
