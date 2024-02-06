@@ -150,10 +150,10 @@ function Jugos(props: Props) {
           height: "100%",
           zIndex: -1,
           backgroundImage: `url(${backImg})`, // Usa la imagen importada como fondo
-          backgroundRepeat: "repeat", // Repite la imagen en todo el alto y ancho
+          backgroundRepeat: "cover", // Repite la imagen en todo el alto y ancho
           backgroundAttachment: "fixed", // Fija la imagen para que se desplace con la ventana
-          backgroundSize: "auto", // Ajusta la imagen al tamaño del contenedor
-          filter: "blur(200px)",
+          backgroundSize: "cover", // Ajusta la imagen al tamaño del contenedor
+          filter: "blur(120px)",
         }}
       ></div>
 
