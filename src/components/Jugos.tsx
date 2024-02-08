@@ -189,7 +189,9 @@ function Jugos(props: Props) {
                   display: { xs: "flex", md: "none" },
                 }}
               >
-                <img src={piwologo} width={"80px"} loading="lazy" />
+                <a href="/">
+                  <img src={piwologo} width={"80px"} />
+                </a>
               </Box>
 
               <Box
@@ -250,7 +252,9 @@ function Jugos(props: Props) {
                   margin: 0,
                 }}
               >
-                <img src={piwologo} width={"150px"} loading="lazy" />
+                <a href="/">
+                  <img src={piwologo} width={"150px"} />
+                </a>
               </Box>
               <Box
                 sx={{
