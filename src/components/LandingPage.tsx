@@ -763,8 +763,8 @@ function LandingPage(props: Props) {
             // padding={10}
             spacing={{ xs: 10, md: 10, lg: 2 }}
             sx={{
-              paddingRight: { xs: 5, md: 0 },
-              paddingLeft: { xs: 5, md: 0 },
+              paddingRight: { xs: 0, md: 0 },
+              paddingLeft: { xs: 0, md: 0 },
             }}
           >
             <Grid item xs={12} md={12} lg={4}>
