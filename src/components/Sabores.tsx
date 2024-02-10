@@ -246,7 +246,7 @@ function Sabores(props: Props) {
                 }}
               >
                 <a href="/">
-                <img src={piwologo} width={"80px"} />
+                  <img src={piwologo} width={"80px"} />
                 </a>
               </Box>
 
@@ -308,9 +308,8 @@ function Sabores(props: Props) {
                   margin: 0,
                 }}
               >
-                                <a href="/">
-
-                <img src={piwologo} width={"150px"} />
+                <a href="/">
+                  <img src={piwologo} width={"150px"} />
                 </a>
               </Box>
               <Box
@@ -579,6 +578,21 @@ function Sabores(props: Props) {
             <br />
           </Box>
 
+          <Grid item xs={10}>
+            <p
+              style={{
+                color: "#6e6e6e",
+                fontSize: 35,
+                fontWeight: 500,
+              }}
+            >
+              Aplicamos el 'Know How' de la fabricacion del
+              <b> helado artesanal Italiano</b> a travez de maquinarias,
+              tecnicas y una distinguida formacion de nuestro{" "}
+              <b>maestro heladero</b>.
+            </p>
+          </Grid>
+
           <Grid
             container
             // gap={5}
@@ -590,7 +604,7 @@ function Sabores(props: Props) {
               // flexWrap: "wrap",
               // minWidth: 300,
               width: "100%",
-              // marginTop: 5,
+              paddingTop: 15,
             }}
           >
             {flavorsArray.map((element) => {

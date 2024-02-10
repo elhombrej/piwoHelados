@@ -2,29 +2,9 @@ import * as React from "react";
 import { Box, Grid, IconButton } from "@mui/material";
 import piwologocolor from "../images/piwologocolor.png";
 import piwologo from "../images/piwologo.png";
-import anana from "../images/iceCreamFlavors/anana.jpg";
-import arandanos from "../images/iceCreamFlavors/arandanos.jpg";
-import cheesecake from "../images/iceCreamFlavors/cheesecake.jpg";
-import chocolateItaliano from "../images/iceCreamFlavors/chocolateItaliano.jpg";
-import chocolateSuizo from "../images/iceCreamFlavors/chocolateSuizo.jpg";
-import cremaConPasasDeUvaAlRon from "../images/iceCreamFlavors/cremaConPasasDeUvaAlRon.jpg";
-import cremaRusa from "../images/iceCreamFlavors/cremaRusa.jpg";
-import dulceDeLecheGranizado from "../images/iceCreamFlavors/dulceDeLecheGranizado.jpg";
-import ferreroR from "../images/iceCreamFlavors/ferreroR.jpg";
-import frambueza from "../images/iceCreamFlavors/frambueza.jpg";
-import frutilla from "../images/iceCreamFlavors/frutilla.jpg";
-import frutosRojos from "../images/iceCreamFlavors/frutosRojos.jpg";
-import limon from "../images/iceCreamFlavors/limon.jpg";
-import mantecol from "../images/iceCreamFlavors/mantecol.jpg";
-import maracuya from "../images/iceCreamFlavors/maracuya.jpg";
-import piwojugos from "/piwojugos.png";
-import bottleOrange from "/bottleOrange.png";
-import bottleLightOrange from "/bottleLightOrange.png";
-import bottleLemon from "/bottleLemon.png";
-import bottleGreen from "/bottleGreen.png";
-import bottlePurple from "/bottlePurple.png";
-import bottleYellow from "/bottleYellow.png";
-import bottleRed from "/bottleRed.png";
+import shakeYellow from "/shakeYellow.png";
+import shakeRed from "/shakeRed.png";
+import shakeOrange from "/shakeOrange.png";
 import "./App.css";
 import AppBar from "@mui/material/AppBar";
 import Typography from "@mui/material/Typography";
@@ -66,34 +46,16 @@ function HideOnScroll(props: Props) {
 }
 
 const flavorsArray = [
-  { name: "Durazno", image: bottleLightOrange, icons: "🍑" },
-  { name: "Frutilla", image: bottleRed, icons: "🍓" },
-  { name: "Naranja", image: bottleOrange, icons: "🍊" },
-  { name: "Limon con Jengibre y Menta", image: bottleLemon, icons: "🍋" },
-  { name: "Zanahoria Con Naranja", image: bottleOrange, icons: "🥕 🍊" },
-  { name: "Naranja Con Banana", image: bottleLightOrange, icons: "🍊 🍌" },
-  { name: "Anana", image: bottleYellow, icons: "🍍" },
-  { name: "Mango", image: bottleYellow, icons: "🥭" },
-  { name: "Arandanos Con Frutilla", image: bottlePurple, icons: "🫐 🍓" },
-  { name: "Maracuya Con Mango", image: bottleYellow, icons: "🥭" },
-  {
-    name: "Apio Con Manzana Verde, Naranja y Jengibre",
-    image: bottleGreen,
-    icons: "🥬 🍏 🍊 🫚",
-  },
-  {
-    name: "Espinaca con Kiwi, Naranja y Jengibre",
-    image: bottleLemon,
-    icons: "🥬 🥝 🍊 🫚",
-  },
-  {
-    name: "Remolacha con Naranja y Zanahoria",
-    image: bottleOrange,
-    icons: "🥕 🍊",
-  },
+  { name: "Durazno", image: shakeOrange, icons: "🍑" },
+  { name: "Frambueza", image: shakeRed, icons: "🍇" },
+  { name: "Frutilla", image: shakeRed, icons: "🍓" },
+  { name: "Maracuya", image: shakeOrange, icons: "🥭" },
+  { name: "Anana", image: shakeYellow, icons: "🍍" },
+  { name: "Mango", image: shakeOrange, icons: "🥭" },
+  { name: "Banana", image: shakeYellow, icons: "🍌" },
 ];
 
-function Jugos(props: Props) {
+function Batidos(props: Props) {
   const StyledMenu = styled((props: MenuProps) => (
     <Menu
       elevation={0}
@@ -539,7 +501,7 @@ function Jugos(props: Props) {
                 height: "auto",
               }}
             /> */}
-              JUGOS
+              BATIDOS
             </h1>
             <br />
           </Box>
@@ -552,9 +514,9 @@ function Jugos(props: Props) {
                 fontWeight: 500,
               }}
             >
-              Nuestros jugos están endulzados con <b>Stevia</b> y son de origen
-              <b> 100% natural</b>. No contienen{" "}
-              <b>colorantes, conservantes, ni azúcares</b>.
+              Seleccione hasta <b> dos sabores</b> de las mejores{" "}
+              <b>frutas de estacion</b> para nuestros batidos, licuados o{" "}
+              <b>milkshakes con helado</b> elaborados en el momento.
             </p>
           </Grid>
 
@@ -687,4 +649,4 @@ function Jugos(props: Props) {
   );
 }
 
-export default Jugos;
+export default Batidos;
