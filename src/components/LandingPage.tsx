@@ -36,7 +36,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import "react-slideshow-image/dist/styles.css";
 import { Slide as SlideShow } from "react-slideshow-image";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { divIcon } from "leaflet";
+import { DivOverlay, divIcon } from "leaflet";
 import { renderToString } from "react-dom/server";
 import backImg from "/back.png";
 import shake from "/shake.png";
@@ -772,40 +772,49 @@ function LandingPage(props: Props) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
               >
-                <Box
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <ImageButton
+   
+                  {/* <ImageButton
                     // focusRipple
                     key={piwocafe}
                     sx={{
                       width: { xs: "100%", md: "100%" },
                       minHeight: 200,
                     }}
-                  >
-                    <a href="/sabores/es">
-                      <ImageSrc
-                        style={{ backgroundImage: `url(${frutosRojos})` }}
-                      />
-                      <Image>
-                        <p
-                          style={{
-                            fontSize: 60,
-                            height: 10,
-                            fontWeight: 700,
-                            // fontFamily: "Bebas Neue, sans-serif",
-                          }}
-                        >
-                          {`HELADOS`}
-                        </p>
-                      </Image>
-                    </a>
-                  </ImageButton>
+                  > */}
+                  <a href="/sabores/es">
+                    {/* <Image> */}
+                    <div
+                      style={{
+                        width: '100%',
+                        height: 200,
+                        backgroundImage: `url(${frutosRojos})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        position: "relative",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "flex-end",
+                        padding: "20px", // Añade un poco de relleno alrededor del texto
+                        boxSizing: "border-box", // Incluye el padding en el tamaño total del rectángulo
+                      }}
+                    >
+                      <p
+                        style={{
+                          fontSize: 60,
+                          fontWeight: 700,
+                          color: "white", // Cambia el color del texto para que sea visible
+                          textAlign: "center", // Alinea el texto en el centro horizontalmente
+                          marginBottom: "20px", // Mueve el texto un poco más hacia abajo
+                        }}
+                      >
+                        HELADOS
+                      </p>
+                    </div>
+
+                    {/* </Image> */}
+                  </a>
+                  {/* </ImageButton> */}
 
                   {/* <Button variant="text" size="large"> */}
                   <p
@@ -829,7 +838,6 @@ function LandingPage(props: Props) {
                       {`VER SABORES>`}
                     </a>
                   </div>
-                </Box>
               </motion.div>
             </Grid>
 
