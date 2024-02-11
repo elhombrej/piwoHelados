@@ -8,7 +8,7 @@ import piwocafe from "/piwocafe.jpg";
 import piwosalado from "/piwosalado.png";
 import piwociudadvieja from "/piwociudadvieja.jpg";
 import piwovilladolores from "/piwovilladolores.png";
-import piwolocal2 from "/piwolocal2.png";
+import sandwich from "/sandwich.png";
 import piwojugos from "/piwojugos.jpg";
 import piwolocal1 from "/piwolocal1.jpg";
 import cakes from "/cakes.jpg";
@@ -66,7 +66,7 @@ function HideOnScroll(props: Props) {
   );
 }
 
-const images = [piwoheader, piwolocal2, piwojugos, piwolocal1];
+const images = [piwoheader, sandwich, piwojugos, piwolocal1];
 
 function LandingPage(props: Props) {
   const ImageButton = styled(ButtonBase)(({ theme }) => ({
@@ -750,23 +750,24 @@ function LandingPage(props: Props) {
             paddingRight: 5,
             paddingLeft: 5,
             paddingTop: 50,
-            paddingBottom: 30,
+            paddingBottom: 150,
             // background: "linear-gradient(to top, #ffffff, #adceed)",
           }}
         >
           <Grid
             container
             direction={"row"}
-            alignItems={"flex-start"}
+            alignItems={"stretch"}
             justifyContent={"center"}
-            spacing={5}
+            height={"100%"}
             // padding={10}
+            spacing={{ xs: 10, md: 10, lg: 2 }}
             sx={{
-              paddingRight: { xs: 5, md: 0 },
-              paddingLeft: { xs: 5, md: 0 },
+              paddingRight: { xs: 0, md: 0 },
+              paddingLeft: { xs: 0, md: 0 },
             }}
           >
-            <Grid item xs={12} md={3}>
+            <Grid item xs={12} md={12} lg={4}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -841,139 +842,155 @@ function LandingPage(props: Props) {
               </motion.div>
             </Grid>
 
-            <Grid item xs={12} md={3}>
+            <Grid item xs={12} md={12} lg={4}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
+                style={{ height: "100%" }}
               >
-                <Box
+                <div
                   style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
+                    border: "4px solid white",
+                    // borderLeft: "4px solid white",
+                    // borderBottom: "4px solid white",
+                    padding: "20px", // Ajusta el espacio interno según tus necesidades
+                    maxWidth: "600px", // Ajusta el ancho máximo según tus necesidades
+                    margin: "0 auto", // Centra el contenido horizontalmente
+                    height: "100%",
+                    minWidth: "300px",
                   }}
                 >
-                  <ImageButton
-                    focusRipple
-                    key={piwocafe}
-                    sx={{
-                      width: { xs: "100%", md: "100%" },
-                      minHeight: 200,
-                    }}
-                  >
-                    <a href="/jugos/es">
-                      <ImageSrc
-                        style={{ backgroundImage: `url(${jugoBack})` }}
-                      />
-                      <Image>
-                        <p
-                          style={{
-                            fontSize: 60,
-                            height: 10,
-                            fontWeight: 700,
-                            // fontFamily: "Bebas Neue, sans-serif",
-                          }}
-                        >
-                          {`JUGOS`}
-                        </p>
-                      </Image>
-                    </a>
-                  </ImageButton>
-
-                  {/* <Button variant="text" size="large"> */}
-                  <p
-                    style={{ color: "#5e5e5e", fontSize: 35, fontWeight: 500 }}
-                  >
-                    Nuestros jugos están endulzados con <b>Stevia</b> y son de
-                    origen
-                    <b> 100% natural</b>. No contienen{" "}
-                    <b>colorantes, conservantes, ni azúcares</b>.
-                  </p>
-
-                  <div
+                  <Box
                     style={{
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "center",
-                      justifyContent: "center",
+                      justifyContent: "space-between",
+                      height: "100%",
                     }}
                   >
-                    {/* <Button variant="text" size="large"> */}
-                    <a href="/jugos/es" style={{ fontSize: 50 }}>
-                      {`VER SABORES>`}
-                    </a>
-                    {/* </Button> */}
-                  </div>
-                </Box>
+                    <ImageButton
+                      focusRipple
+                      key={1231}
+                      sx={{
+                        width: { xs: "100%", md: "100%" },
+                        minHeight: 200,
+                        minWidth: "100%",
+                      }}
+                    >
+                      <a href="/jugos/es">
+                        <ImageSrc
+                          style={{
+                            backgroundImage: `url(${jugoBack})`,
+                            width: "100%",
+                            minWidth: "100%",
+                          }}
+                        />
+                        <Image>
+                          <p
+                            style={{
+                              fontSize: 60,
+                              height: 10,
+                              fontWeight: 700,
+                              // fontFamily: "Bebas Neue, sans-serif",
+                            }}
+                          >
+                            {`JUGOS`}
+                          </p>
+                        </Image>
+                      </a>
+                    </ImageButton>
+
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      {/* <Button variant="text" size="large"> */}
+                      <a href="/jugos/es" style={{ fontSize: 50 }}>
+                        {`VER SABORES>`}
+                      </a>
+                      {/* </Button> */}
+                    </div>
+                  </Box>
+                </div>
               </motion.div>
             </Grid>
 
-            <Grid item xs={12} md={3}>
+            <Grid item xs={12} md={12} lg={4}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
+                style={{ height: "100%" }}
               >
-                <Box
+                <div
                   style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "space-between",
+                    border: "4px solid white",
+                    // borderLeft: "4px solid white",
+                    // borderBottom: "4px solid white",
+                    padding: "20px", // Ajusta el espacio interno según tus necesidades
+                    maxWidth: "600px", // Ajusta el ancho máximo según tus necesidades
+                    margin: "0 auto", // Centra el contenido horizontalmente
+                    // minHeight: '100%',
                     height: "100%",
+                    minWidth: "300px",
                   }}
                 >
-                  <ImageButton
-                    focusRipple
-                    key={piwocafe}
-                    sx={{
-                      width: { xs: "100%", md: "100%" },
-                      minHeight: 200,
-                    }}
-                  >
-                    {/* <a href="/batidos/es"> */}
-                    <ImageSrc style={{ backgroundImage: `url(${shake})` }} />
-                    <Image>
-                      <p
-                        style={{
-                          fontSize: 60,
-                          height: 10,
-                          fontWeight: 700,
-                          // fontFamily: "Bebas Neue, sans-serif",
-                        }}
-                      >
-                        {`BATIDOS`}
-                      </p>
-                    </Image>
-                    {/* </a> */}
-                  </ImageButton>
-
-                  {/* <Button variant="text" size="large"> */}
-                  <p
-                    style={{ color: "#6e6e6e", fontSize: 35, fontWeight: 500 }}
-                  >
-                    Seleccion de las mejores <b>frutas de estacion</b> para
-                    nuestros batidos, licuados o <b>milkshakes con helado</b>{" "}
-                    elaborados en el momento.
-                  </p>
-
-                  <div
+                  <Box
                     style={{
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "center",
-                      justifyContent: "center",
+                      justifyContent: "space-between",
+                      height: "100%",
                     }}
                   >
-                    {/* <Button variant="text" size="large"> */}
-                    {/* <a href="/" style={{ fontSize: 50 }}>
-                    VER SABORES
-                  </a> */}
-                    {/* </Button> */}
-                  </div>
-                </Box>
+                    <ImageButton
+                      focusRipple
+                      key={12312}
+                      sx={{
+                        width: { xs: "100%", md: "100%" },
+                        minHeight: 200,
+                      }}
+                    >
+                      <a href="/batidos/es">
+                        <ImageSrc
+                          style={{ backgroundImage: `url(${shake})` }}
+                        />
+                        <Image>
+                          <p
+                            style={{
+                              fontSize: 60,
+                              height: 10,
+                              fontWeight: 700,
+                              // fontFamily: "Bebas Neue, sans-serif",
+                            }}
+                          >
+                            {`BATIDOS`}
+                          </p>
+                        </Image>
+                      </a>
+                    </ImageButton>
+
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <a href="/batidos/es" style={{ fontSize: 50 }}>
+                        {`VER SABORES>`}
+                      </a>
+                    </div>
+                  </Box>
+                </div>
               </motion.div>
             </Grid>
           </Grid>
@@ -1085,9 +1102,9 @@ function LandingPage(props: Props) {
                   PASTELERIA A TODA HORA
                 </h1>
                 <p style={{ color: "#6e6e6e", fontSize: 35, fontWeight: 500 }}>
-                  La línea de <b> postres DOMUM</b> es elaborada de forma
-                  casera, combinando diferentes elementos que hacen de su sabor,
-                  textura y color una <b>exquisita experiencia</b>.
+                  Nuestros postres son <b> elaborados de forma casera</b>{" "}
+                  combinando diferentes elementos que hacen de su sabor, textura
+                  y color una <b> experiencia exquisita</b>.
                 </p>
               </motion.div>
             </Grid>
@@ -1155,7 +1172,7 @@ function LandingPage(props: Props) {
             <Grid item xs={12} md={5}>
               <ImageButton
                 focusRipple
-                key={piwocafe}
+                key={123123}
                 sx={{
                   width: { xs: "100%", md: "100%" },
                   minHeight: 200,
@@ -1202,7 +1219,7 @@ function LandingPage(props: Props) {
             <Grid item xs={12} md={5}>
               <ImageButton
                 focusRipple
-                key={piwosalado}
+                key={1231231}
                 sx={{
                   width: { xs: "100%", md: "100%" },
                   minHeight: 200,
