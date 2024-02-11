@@ -773,20 +773,21 @@ function LandingPage(props: Props) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
               >
-   
-                  {/* <ImageButton
-                    // focusRipple
-                    key={piwocafe}
-                    sx={{
-                      width: { xs: "100%", md: "100%" },
-                      minHeight: 200,
-                    }}
-                  > */}
+                <div
+                  style={{
+                    border: "4px solid white",
+                    padding: "20px", // Ajusta el espacio interno según tus necesidades
+                    maxWidth: "600px", // Ajusta el ancho máximo según tus necesidades
+                    margin: "0 auto", // Centra el contenido horizontalmente
+                    height: "100%",
+                    minWidth: "300px",
+                  }}
+                >
                   <a href="/sabores/es">
                     {/* <Image> */}
                     <div
                       style={{
-                        width: '100%',
+                        width: "100%",
                         height: 200,
                         backgroundImage: `url(${frutosRojos})`,
                         backgroundRepeat: "no-repeat",
@@ -815,17 +816,6 @@ function LandingPage(props: Props) {
 
                     {/* </Image> */}
                   </a>
-                  {/* </ImageButton> */}
-
-                  {/* <Button variant="text" size="large"> */}
-                  <p
-                    style={{ color: "#6e6e6e", fontSize: 35, fontWeight: 500 }}
-                  >
-                    Aplicamos el 'Know How' de la fabricacion del
-                    <b> helado artesanal Italiano</b> a travez de maquinarias,
-                    tecnicas y una distinguida formacion de nuestro{" "}
-                    <b>maestro heladero</b>.
-                  </p>
 
                   <div
                     style={{
@@ -835,88 +825,13 @@ function LandingPage(props: Props) {
                       justifyContent: "center",
                     }}
                   >
-                    <a href="/sabores/es" style={{ fontSize: 50 }}>
+                    <a
+                      href="/sabores/es"
+                      style={{ fontSize: 50, marginTop: 50 }}
+                    >
                       {`VER SABORES>`}
                     </a>
                   </div>
-              </motion.div>
-            </Grid>
-
-            <Grid item xs={12} md={12} lg={4}>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-                style={{ height: "100%" }}
-              >
-                <div
-                  style={{
-                    border: "4px solid white",
-                    // borderLeft: "4px solid white",
-                    // borderBottom: "4px solid white",
-                    padding: "20px", // Ajusta el espacio interno según tus necesidades
-                    maxWidth: "600px", // Ajusta el ancho máximo según tus necesidades
-                    margin: "0 auto", // Centra el contenido horizontalmente
-                    height: "100%",
-                    minWidth: "300px",
-                  }}
-                >
-                  <Box
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "space-between",
-                      height: "100%",
-                    }}
-                  >
-                    <ImageButton
-                      focusRipple
-                      key={1231}
-                      sx={{
-                        width: { xs: "100%", md: "100%" },
-                        minHeight: 200,
-                        minWidth: "100%",
-                      }}
-                    >
-                      <a href="/jugos/es">
-                        <ImageSrc
-                          style={{
-                            backgroundImage: `url(${jugoBack})`,
-                            width: "100%",
-                            minWidth: "100%",
-                          }}
-                        />
-                        <Image>
-                          <p
-                            style={{
-                              fontSize: 60,
-                              height: 10,
-                              fontWeight: 700,
-                              // fontFamily: "Bebas Neue, sans-serif",
-                            }}
-                          >
-                            {`JUGOS`}
-                          </p>
-                        </Image>
-                      </a>
-                    </ImageButton>
-
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      {/* <Button variant="text" size="large"> */}
-                      <a href="/jugos/es" style={{ fontSize: 50 }}>
-                        {`VER SABORES>`}
-                      </a>
-                      {/* </Button> */}
-                    </div>
-                  </Box>
                 </div>
               </motion.div>
             </Grid>
@@ -926,70 +841,132 @@ function LandingPage(props: Props) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
-                style={{ height: "100%" }}
               >
                 <div
                   style={{
                     border: "4px solid white",
-                    // borderLeft: "4px solid white",
-                    // borderBottom: "4px solid white",
                     padding: "20px", // Ajusta el espacio interno según tus necesidades
                     maxWidth: "600px", // Ajusta el ancho máximo según tus necesidades
                     margin: "0 auto", // Centra el contenido horizontalmente
-                    // minHeight: '100%',
                     height: "100%",
                     minWidth: "300px",
                   }}
                 >
-                  <Box
+                  <a href="/jugos/es">
+                    {/* <Image> */}
+                    <div
+                      style={{
+                        width: "100%",
+                        height: 200,
+                        backgroundImage: `url(${jugoBack})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        position: "relative",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "flex-end",
+                        padding: "20px", // Añade un poco de relleno alrededor del texto
+                        boxSizing: "border-box", // Incluye el padding en el tamaño total del rectángulo
+                      }}
+                    >
+                      <p
+                        style={{
+                          fontSize: 60,
+                          fontWeight: 700,
+                          color: "white", // Cambia el color del texto para que sea visible
+                          textAlign: "center", // Alinea el texto en el centro horizontalmente
+                          marginBottom: "20px", // Mueve el texto un poco más hacia abajo
+                        }}
+                      >
+                        JUGOS
+                      </p>
+                    </div>
+
+                    {/* </Image> */}
+                  </a>
+
+                  <div
                     style={{
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "center",
-                      justifyContent: "space-between",
-                      height: "100%",
+                      justifyContent: "center",
                     }}
                   >
-                    <ImageButton
-                      focusRipple
-                      key={12312}
-                      sx={{
-                        width: { xs: "100%", md: "100%" },
-                        minHeight: 200,
-                      }}
-                    >
-                      <a href="/batidos/es">
-                        <ImageSrc
-                          style={{ backgroundImage: `url(${shake})` }}
-                        />
-                        <Image>
-                          <p
-                            style={{
-                              fontSize: 60,
-                              height: 10,
-                              fontWeight: 700,
-                              // fontFamily: "Bebas Neue, sans-serif",
-                            }}
-                          >
-                            {`BATIDOS`}
-                          </p>
-                        </Image>
-                      </a>
-                    </ImageButton>
+                    <a href="/jugos/es" style={{ fontSize: 50, marginTop: 50 }}>
+                      {`VER SABORES>`}
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            </Grid>
 
+            <Grid item xs={12} md={12} lg={4}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+              >
+                <div
+                  style={{
+                    border: "4px solid white",
+                    padding: "20px", // Ajusta el espacio interno según tus necesidades
+                    maxWidth: "600px", // Ajusta el ancho máximo según tus necesidades
+                    margin: "0 auto", // Centra el contenido horizontalmente
+                    height: "100%",
+                    minWidth: "300px",
+                  }}
+                >
+                  <a href="/batidos/es">
+                    {/* <Image> */}
                     <div
                       style={{
+                        width: "100%",
+                        height: 200,
+                        backgroundImage: `url(${shake})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        position: "relative",
                         display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
                         justifyContent: "center",
+                        alignItems: "flex-end",
+                        padding: "20px", // Añade un poco de relleno alrededor del texto
+                        boxSizing: "border-box", // Incluye el padding en el tamaño total del rectángulo
                       }}
                     >
-                      <a href="/batidos/es" style={{ fontSize: 50 }}>
-                        {`VER SABORES>`}
-                      </a>
+                      <p
+                        style={{
+                          fontSize: 60,
+                          fontWeight: 700,
+                          color: "white", // Cambia el color del texto para que sea visible
+                          textAlign: "center", // Alinea el texto en el centro horizontalmente
+                          marginBottom: "20px", // Mueve el texto un poco más hacia abajo
+                        }}
+                      >
+                        BATIDOS
+                      </p>
                     </div>
-                  </Box>
+
+                    {/* </Image> */}
+                  </a>
+
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <a
+                      href="/batidos/es"
+                      style={{ fontSize: 50, marginTop: 50 }}
+                    >
+                      {`VER SABORES>`}
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             </Grid>
@@ -1170,38 +1147,53 @@ function LandingPage(props: Props) {
             }}
           >
             <Grid item xs={12} md={5}>
-              <ImageButton
-                focusRipple
-                key={123123}
-                sx={{
-                  width: { xs: "100%", md: "100%" },
-                  minHeight: 200,
-                }}
+              <a
+                href="https://www.pedidosya.com.uy/restaurantes/montevideo/piwo-cafe-menu?category=71&search=piwo"
+                target="_ black"
               >
-                <a
-                  href="https://www.pedidosya.com.uy/restaurantes/montevideo/piwo-cafe-menu?category=71&search=piwo"
-                  target="_ black"
+                <div
+                  style={{
+                    width: "100%",
+                    height: 200,
+                    backgroundImage: `url(${piwocafe})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    position: "relative",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "flex-end",
+                    padding: "20px", // Añade un poco de relleno alrededor del texto
+                    boxSizing: "border-box", // Incluye el padding en el tamaño total del rectángulo
+                  }}
                 >
-                  <ImageSrc style={{ backgroundImage: `url(${piwocafe})` }} />
-                  <ImageBackdrop className="MuiImageBackdrop-root" />
-                  <Image>
-                    <Typography
-                      component="span"
-                      variant="subtitle1"
-                      color="inherit"
-                      sx={{
-                        position: "relative",
-                        p: 4,
-                        pt: 2,
-                        pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                  <div
+                    style={{
+                      position: "relative",
+                      width: 300, // Ancho del contenedor
+                      height: "fit-content", // Alto del contenedor
+                      backgroundColor: "rgba(0, 0, 0, 0.5)", // Color oscuro con transparencia
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <p
+                      style={{
+                        fontSize: 60,
+                        fontWeight: 700,
+                        color: "white", // Cambia el color del texto para que sea visible
+                        textAlign: "center", // Alinea el texto en el centro horizontalmente
+                        margin: 0, // Elimina el margen del texto para evitar espacios no deseados
                       }}
                     >
-                      <p style={{ fontSize: 50, height: 10 }}>PIWO CAFE</p>
-                      <ImageMarked className="MuiImageMarked-root" />
-                    </Typography>
-                  </Image>
-                </a>
-              </ImageButton>
+                      PIWO CAFE
+                    </p>
+                  </div>
+                </div>
+
+                {/* </Image> */}
+              </a>
 
               <Box
                 sx={{
@@ -1217,38 +1209,53 @@ function LandingPage(props: Props) {
             </Grid>
 
             <Grid item xs={12} md={5}>
-              <ImageButton
-                focusRipple
-                key={1231231}
-                sx={{
-                  width: { xs: "100%", md: "100%" },
-                  minHeight: 200,
-                }}
+              <a
+                href="https://www.pedidosya.com.uy/restaurantes/montevideo/piwo-resto-menu?category=71&search=piwo"
+                target="_ black"
               >
-                <a
-                  href="https://www.pedidosya.com.uy/restaurantes/montevideo/piwo-resto-menu?category=71&search=piwo"
-                  target="_ black"
+                <div
+                  style={{
+                    width: "100%",
+                    height: 200,
+                    backgroundImage: `url(${piwosalado})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    position: "relative",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "flex-end",
+                    padding: "20px", // Añade un poco de relleno alrededor del texto
+                    boxSizing: "border-box", // Incluye el padding en el tamaño total del rectángulo
+                  }}
                 >
-                  <ImageSrc style={{ backgroundImage: `url(${piwosalado})` }} />
-                  <ImageBackdrop className="MuiImageBackdrop-root" />
-                  <Image>
-                    <Typography
-                      component="span"
-                      variant="subtitle1"
-                      color="inherit"
-                      sx={{
-                        position: "relative",
-                        p: 4,
-                        pt: 2,
-                        pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                  <div
+                    style={{
+                      position: "relative",
+                      width: 300, // Ancho del contenedor
+                      height: "fit-content", // Alto del contenedor
+                      backgroundColor: "rgba(0, 0, 0, 0.5)", // Color oscuro con transparencia
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <p
+                      style={{
+                        fontSize: 60,
+                        fontWeight: 700,
+                        color: "white", // Cambia el color del texto para que sea visible
+                        textAlign: "center", // Alinea el texto en el centro horizontalmente
+                        margin: 0, // Elimina el margen del texto para evitar espacios no deseados
                       }}
                     >
-                      <p style={{ fontSize: 50, height: 10 }}>PIWO RESTO</p>
-                      <ImageMarked className="MuiImageMarked-root" />
-                    </Typography>
-                  </Image>
-                </a>
-              </ImageButton>
+                      PIWO RESTO
+                    </p>
+                  </div>
+                </div>
+
+                {/* </Image> */}
+              </a>
 
               <Box
                 sx={{
