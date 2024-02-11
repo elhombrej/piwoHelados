@@ -750,7 +750,7 @@ function LandingPage(props: Props) {
             paddingRight: 5,
             paddingLeft: 5,
             paddingTop: 50,
-            paddingBottom: 150,
+            paddingBottom: 50,
             // background: "linear-gradient(to top, #ffffff, #adceed)",
           }}
         >
