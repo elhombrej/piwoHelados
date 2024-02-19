@@ -3,35 +3,49 @@ import { Box, Grid, IconButton } from "@mui/material";
 import piwologocolor from "/piwologocolor.png";
 import piwologo from "/piwologo.png";
 import piwosalado from "/piwosalado.png";
-import anana from "/iceCreamFlavors/anana.jpg";
-import arandanos from "/iceCreamFlavors/arandanos.jpg";
-import cheesecake from "/iceCreamFlavors/cheesecake.jpg";
-import chocolateItaliano from "/iceCreamFlavors/chocolateItaliano.jpg";
-import chocolateSuizo from "/iceCreamFlavors/chocolateSuizo.jpg";
-import cremaConPasasDeUvaAlRon from "/iceCreamFlavors/cremaConPasasDeUvaAlRon.jpg";
-import cremaRusa from "/iceCreamFlavors/cremaRusa.jpg";
-import dulceDeLecheGranizado from "/iceCreamFlavors/dulceDeLecheGranizado.jpg";
-import ferreroR from "/iceCreamFlavors/ferreroR.jpg";
-import frambueza from "/iceCreamFlavors/frambueza.jpg";
-import frutilla from "/iceCreamFlavors/frutilla.jpg";
-import frutosRojos from "/iceCreamFlavors/frutosRojos.jpg";
-import limon from "/iceCreamFlavors/limon.jpg";
-import mantecol from "/iceCreamFlavors/mantecol.jpg";
-import maracuya from "/iceCreamFlavors/maracuya.jpg";
-import menta from "/iceCreamFlavors/menta.jpg";
-import moka from "/iceCreamFlavors/moka.jpg";
-import nutella from "/iceCreamFlavors/nutella.jpg";
-import oreo from "/iceCreamFlavors/oreo.jpg";
-import pistacho from "/iceCreamFlavors/pistacho.jpg";
-import sambayonConCereza from "/iceCreamFlavors/sambayonConCereza.jpg";
-import superDulceDeLeche from "/iceCreamFlavors/superDulceDeLeche.jpg";
-import tiramisu from "/iceCreamFlavors/tiramisu.jpg";
-import tramontana from "/iceCreamFlavors/tramontana.jpg";
-import vainilla from "/iceCreamFlavors/vainilla.jpg";
-import cocoSplit from "/iceCreamFlavors/cocoSplit.jpg";
+import anana from "/iceCreamFlavors/anana.png";
+import arandanos from "/iceCreamFlavors/arandanos.png";
+import cheesecake from "/iceCreamFlavors/cheesecake.png";
+import chocolateItaliano from "/iceCreamFlavors/chocolateItaliano.png";
+import chocolateSuizo from "/iceCreamFlavors/chocolateSuizo.png";
+import cremaConPasasDeUvaAlRon from "/iceCreamFlavors/cremaConPasasDeUvaAlRon.png";
+import cremaRusa from "/iceCreamFlavors/cremaRusa.png";
+import dulceDeLecheGranizado from "/iceCreamFlavors/dulceDeLecheGranizado.png";
+import ferreroR from "/iceCreamFlavors/ferreroR.png";
+import frambueza from "/iceCreamFlavors/frambueza.png";
+import chocolate from "/iceCreamFlavors/chocolate.png";
+import frutilla from "/iceCreamFlavors/frutilla.png";
+import frutosRojos from "/iceCreamFlavors/frutosRojos.png";
+import limon from "/iceCreamFlavors/limon.png";
+import mantecol from "/iceCreamFlavors/mantecol.png";
+import maracuya from "/iceCreamFlavors/maracuya.png";
+import menta from "/iceCreamFlavors/menta.png";
+import moka from "/iceCreamFlavors/moka.png";
+import nutella from "/iceCreamFlavors/nutella.png";
+import oreo from "/iceCreamFlavors/oreo.png";
+import pistacho from "/iceCreamFlavors/pistacho.png";
+import sambayonConCereza from "/iceCreamFlavors/sambayonConCereza.png";
+import superDulceDeLeche from "/iceCreamFlavors/superDulceDeLeche.png";
+import tiramisu from "/iceCreamFlavors/tiramisu.png";
+import tramontana from "/iceCreamFlavors/tramontana.png";
+import vainilla from "/iceCreamFlavors/vainilla.png";
+import cocoSplit from "/iceCreamFlavors/cocoSplit.png";
 import taccLogo from "/sinTacc.png";
-import piwociudadvieja from "/piwociudadvieja.jpg";
-import piwovilladolores from "/piwovilladolores.png";
+import bananaSplit from "/iceCreamFlavors/bananaSplit.png";
+import chocolateBlanco from "/iceCreamFlavors/chocolateBlanco.png";
+import chocolateHolandes from "/iceCreamFlavors/chocolateHolandes.png";
+import dulceDeLeche from "/iceCreamFlavors/dulceDeLeche.png";
+import durazno from "/iceCreamFlavors/durazno.png";
+import kiwi from "/iceCreamFlavors/kiwi.png";
+import manjarDeNuez from "/iceCreamFlavors/manjarDeNuez.png";
+import uva from "/iceCreamFlavors/uva.png";
+import araza from "/iceCreamFlavors/araza.png";
+import cerbeza from "/iceCreamFlavors/cerbeza.png";
+import fernet from "/iceCreamFlavors/fernet.png";
+import higo from "/iceCreamFlavors/higo.png";
+import mango from "/iceCreamFlavors/mango.png";
+import pera from "/iceCreamFlavors/pera.png";
+import sambayon from "/iceCreamFlavors/sambayon.png";
 import "./App.css";
 import AppBar from "@mui/material/AppBar";
 import Typography from "@mui/material/Typography";
@@ -74,7 +88,22 @@ function HideOnScroll(props: Props) {
   );
 }
 
-const flavorsArray = [
+interface Flavors {
+  name: string;
+  image: string; // Supongo que aquí se almacenará la ruta de la imagen
+  icons: string; // Supongo que aquí se almacenará el emoji relacionado con el producto
+  hasNoTacc?: boolean; // Opcional: si el producto no tiene gluten
+}
+
+const flavorsArrayNoSugar: Flavors[] = [
+  { name: "Ananá", image: anana, icons: "🍍" },
+  { name: "Arándanos", image: arandanos, icons: "🫐" },
+  { name: "Cheesecake", image: cheesecake, icons: "🍰" },
+  { name: "Chocolate Italiano", image: chocolateItaliano, icons: "🍫" },
+  { name: "Chocolate Suizo", image: chocolateSuizo, icons: "🍫" },
+];
+
+const flavorsArray: Flavors[] = [
   { name: "Ananá", image: anana, icons: "🍍" },
   { name: "Arándanos", image: arandanos, icons: "🫐" },
   { name: "Cheesecake", image: cheesecake, icons: "🍰" },
@@ -92,6 +121,7 @@ const flavorsArray = [
     icons: "🥛 🍫",
   },
   { name: "Ferrero Rocher", image: ferreroR, icons: "🍫" },
+  { name: "Chocolate", image: chocolate, icons: "🍫" },
   { name: "Frambuesa", image: frambueza, icons: "🍇" },
   { name: "Frutilla", image: frutilla, icons: "🍓" },
   { name: "Frutos Rojos", image: frutosRojos, icons: "🍒 🍇 🍓" },
@@ -101,14 +131,29 @@ const flavorsArray = [
   { name: "Menta", image: menta, icons: "🌿" },
   { name: "Moka", image: moka, icons: "☕" },
   { name: "Nutella", image: nutella, icons: "🌰" },
-  { name: "Oreo", image: oreo, icons: "🍪", hasTacc: true },
+  { name: "Oreo", image: oreo, icons: "🍪", hasNoTacc: true },
   { name: "Pistacho", image: pistacho, icons: "🥜" },
   { name: "Sambayón con Cereza", image: sambayonConCereza, icons: "🍒" },
   { name: "Super Dulce de Leche", image: superDulceDeLeche, icons: "🥛" },
-  { name: "Tiramisú", image: tiramisu, icons: "🍰", hasTacc: true },
-  { name: "Tramontana", image: tramontana, icons: "🍨", hasTacc: true },
+  { name: "Tiramisú", image: tiramisu, icons: "🍰", hasNoTacc: true },
+  { name: "Tramontana", image: tramontana, icons: "🍨", hasNoTacc: true },
   { name: "Vainilla", image: vainilla, icons: "🍦" },
   { name: "Coco Split", image: cocoSplit, icons: "🥥 🥛" },
+  { name: "Banana Split", image: bananaSplit, icons: "🍌 🥛" },
+  { name: "Chocolate Blanco", image: chocolateBlanco, icons: "🍫" },
+  { name: "Chocolate Holandes", image: chocolateHolandes, icons: "🍫" },
+  { name: "Dulce De Leche", image: dulceDeLeche, icons: "🥛" },
+  { name: "Durazno", image: durazno, icons: "🍑" },
+  { name: "Uva", image: uva, icons: "🍇" },
+  { name: "Kiwi", image: kiwi, icons: "🥝" },
+  { name: "Manjar De Nuez", image: manjarDeNuez, icons: "🍫 🥜" },
+  { name: "Araza", image: araza, icons: "🥭" },
+  { name: "Cerbeza", image: cerbeza, icons: "🍺" },
+  { name: "Fernet", image: fernet, icons: "🍹" },
+  { name: "Higo", image: higo, icons: "🥭" },
+  { name: "Mango", image: mango, icons: "🥭" },
+  { name: "Pera", image: pera, icons: "🍐" },
+  { name: "Sambayon", image: sambayon, icons: "🍦" },
 ];
 
 function Sabores(props: Props) {
@@ -587,10 +632,27 @@ function Sabores(props: Props) {
               }}
             >
               Aplicamos el 'Know How' de la fabricacion del
-              <b> helado artesanal Italiano</b> a travez de maquinarias,
+              <b> helado artesanal Italiano</b> a traves de maquinarias,
               tecnicas y una distinguida formacion de nuestro{" "}
               <b>maestro heladero</b>.
             </p>
+          </Grid>
+
+          <Grid item>
+            <Box
+              sx={{
+                width: "100%",
+                // padding: { xs: 0, md: 10 },
+                display: "flex",
+                alignItems: "flex-start",
+                justifyContent: "flex-start",
+                flexDirection: "row",
+                textAlign: "center",
+              }}
+            >
+              <h1 style={{ fontSize: 80 }}>Sin Azucar</h1>
+              <br />
+            </Box>
           </Grid>
 
           <Grid
@@ -604,15 +666,16 @@ function Sabores(props: Props) {
               // flexWrap: "wrap",
               // minWidth: 300,
               width: "100%",
-              paddingTop: 15,
+              // paddingTop: 15,
             }}
           >
-            {flavorsArray.map((element) => {
+            {flavorsArrayNoSugar.map((element) => {
               return (
                 <Grid
                   item
                   xs={6}
                   md={4}
+                  lg={3}
                   sx={{
                     width: "100%",
                     display: "flex",
@@ -665,7 +728,110 @@ function Sabores(props: Props) {
                     </span>
                     <div>{element.icons}</div>
                   </Box>
-                  {!element.hasTacc && (
+                  {!element.hasNoTacc && (
+                    <img
+                      src={taccLogo}
+                      width={25}
+                      style={{ marginLeft: 0 }}
+                      loading="lazy"
+                    />
+                  )}
+                </Grid>
+              );
+            })}
+          </Grid>
+
+          <Grid item>
+            <Box
+              sx={{
+                width: "100%",
+                // padding: { xs: 0, md: 10 },
+                display: "flex",
+                alignItems: "flex-start",
+                justifyContent: "flex-start",
+                flexDirection: "row",
+                textAlign: "center",
+              }}
+            >
+              <h1 style={{ fontSize: 80 }}>Con Azucar</h1>
+              <br />
+            </Box>
+          </Grid>
+
+          <Grid
+            container
+            // gap={5}
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "center",
+              // flexWrap: "wrap",
+              // minWidth: 300,
+              width: "100%",
+              // paddingTop: 15,
+            }}
+          >
+            {flavorsArray.map((element) => {
+              return (
+                <Grid
+                  item
+                  xs={6}
+                  md={4}
+                  lg={3}
+                  sx={{
+                    width: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginBottom: 5,
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: { xs: "100px", sm: "200px", md: "200px" },
+                      height: "auto",
+                      borderRadius: 50,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <ImageButton
+                      focusRipple
+                      key={piwosalado}
+                      sx={{
+                        width: "100%",
+                      }}
+                    >
+                      <ImageSrc
+                        style={{ backgroundImage: `url(${element.image})` }}
+                      />
+                      {/* <ImageBackdrop className="MuiImageBackdrop-root" /> */}
+                    </ImageButton>
+                  </Box>
+
+                  <Box
+                    sx={{
+                      // width: { xs: "100%", md: "100%" },
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <span
+                      style={{
+                        color: "#6e6e6e",
+                        fontSize: 35,
+                        fontWeight: 500,
+                        padding: 10,
+                      }}
+                    >
+                      {element.name}
+                    </span>
+                    <div>{element.icons}</div>
+                  </Box>
+                  {!element.hasNoTacc && (
                     <img
                       src={taccLogo}
                       width={25}

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Box, Grid, IconButton } from "@mui/material";
-import piwologocolor from "../images/piwologocolor.png";
-import piwologo from "../images/piwologo.png";
+import piwologocolor from "/piwologocolor.png";
+import piwologo from "/piwologo.png";
 import shakeYellow from "/shakeYellow.png";
 import shakeRed from "/shakeRed.png";
 import shakeOrange from "/shakeOrange.png";
@@ -47,7 +47,7 @@ function HideOnScroll(props: Props) {
 
 const flavorsArray = [
   { name: "Durazno", image: shakeOrange, icons: "🍑" },
-  { name: "Frambueza", image: shakeRed, icons: "🍇" },
+  { name: "Frambuesa", image: shakeRed, icons: "🍇" },
   { name: "Frutilla", image: shakeRed, icons: "🍓" },
   { name: "Maracuya", image: shakeOrange, icons: "🥭" },
   { name: "Anana", image: shakeYellow, icons: "🍍" },
@@ -514,9 +514,9 @@ function Batidos(props: Props) {
                 fontWeight: 500,
               }}
             >
-              Seleccione hasta <b> dos sabores</b> de las mejores{" "}
-              <b>frutas de estacion</b> para nuestros batidos, licuados o{" "}
-              <b>milkshakes con helado</b> elaborados en el momento.
+              Selección de <b>frutas </b> para nuestros{" "}
+              <b>batidos, licuados o milkshakes con helado </b> elaborados en el
+              momento.
             </p>
           </Grid>
 

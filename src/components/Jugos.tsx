@@ -1,23 +1,7 @@
 import * as React from "react";
 import { Box, Grid, IconButton } from "@mui/material";
-import piwologocolor from "../images/piwologocolor.png";
-import piwologo from "../images/piwologo.png";
-import anana from "../images/iceCreamFlavors/anana.jpg";
-import arandanos from "../images/iceCreamFlavors/arandanos.jpg";
-import cheesecake from "../images/iceCreamFlavors/cheesecake.jpg";
-import chocolateItaliano from "../images/iceCreamFlavors/chocolateItaliano.jpg";
-import chocolateSuizo from "../images/iceCreamFlavors/chocolateSuizo.jpg";
-import cremaConPasasDeUvaAlRon from "../images/iceCreamFlavors/cremaConPasasDeUvaAlRon.jpg";
-import cremaRusa from "../images/iceCreamFlavors/cremaRusa.jpg";
-import dulceDeLecheGranizado from "../images/iceCreamFlavors/dulceDeLecheGranizado.jpg";
-import ferreroR from "../images/iceCreamFlavors/ferreroR.jpg";
-import frambueza from "../images/iceCreamFlavors/frambueza.jpg";
-import frutilla from "../images/iceCreamFlavors/frutilla.jpg";
-import frutosRojos from "../images/iceCreamFlavors/frutosRojos.jpg";
-import limon from "../images/iceCreamFlavors/limon.jpg";
-import mantecol from "../images/iceCreamFlavors/mantecol.jpg";
-import maracuya from "../images/iceCreamFlavors/maracuya.jpg";
-import piwojugos from "/piwojugos.png";
+import piwologocolor from "/piwologocolor.png";
+import piwologo from "/piwologo.png";
 import bottleOrange from "/bottleOrange.png";
 import bottleLightOrange from "/bottleLightOrange.png";
 import bottleLemon from "/bottleLemon.png";
@@ -69,7 +53,8 @@ const flavorsArray = [
   { name: "Durazno", image: bottleLightOrange, icons: "🍑" },
   { name: "Frutilla", image: bottleRed, icons: "🍓" },
   { name: "Naranja", image: bottleOrange, icons: "🍊" },
-  { name: "Limon con Jengibre y Menta", image: bottleLemon, icons: "🍋" },
+  { name: "Limon con Jengibre y Menta", image: bottleLemon, icons: "🍋 🫚 🌿" },
+  { name: "Uva", image: bottlePurple, icons: "🍇" },
   { name: "Zanahoria Con Naranja", image: bottleOrange, icons: "🥕 🍊" },
   { name: "Naranja Con Banana", image: bottleLightOrange, icons: "🍊 🍌" },
   { name: "Anana", image: bottleYellow, icons: "🍍" },

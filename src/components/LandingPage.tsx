@@ -3,18 +3,18 @@ import { Box, Grid, IconButton } from "@mui/material";
 import piwologocolor from "/piwologocolor.png";
 import piwologo from "/piwologo.png";
 import pedidosyalogo from "/pedidosya.svg";
-import piwoheader from "/piwoheader.jpg";
-import piwocafe from "/piwocafe.jpg";
+import piwoheader from "/piwoheader.png";
+import piwocafe from "/piwocafe.png";
 import piwosalado from "/piwosalado.png";
-import piwociudadvieja from "/piwociudadvieja.jpg";
+import piwociudadvieja from "/piwociudadvieja.png";
 import piwovilladolores from "/piwovilladolores.png";
 import sandwich from "/sandwich.png";
-import piwojugos from "/piwojugos.jpg";
-import piwolocal1 from "/piwolocal1.jpg";
-import cakes from "/cakes.jpg";
+import piwojugos from "/piwojugos.png";
+import piwolocal1 from "/piwolocal1.png";
+import cakes from "/cakes.png";
 import jugoBack from "/jugoBack.png";
-import frutosRojos from "/iceCreamFlavors/frutosRojos.jpg";
-import barista from "/barista.jpg";
+import frutosRojos from "/iceCreamFlavors/frutosRojos.png";
+import barista from "/barista.png";
 import "./App.css";
 import AppBar from "@mui/material/AppBar";
 import Typography from "@mui/material/Typography";
@@ -353,7 +353,7 @@ function LandingPage(props: Props) {
                         color: "#ffffff",
                       }}
                     >
-                      🇺🇾 MÁS QUE HELADOS
+                      MÁS QUE HELADOS - 🇺🇾
                     </p>
                     <KeyboardArrowDownIcon sx={{ color: "#ffffff" }} />
                   </IconButton>
@@ -381,7 +381,7 @@ function LandingPage(props: Props) {
                         color: "#ffffff",
                       }}
                     >
-                      🇺🇾 MÁS QUE HELADOS
+                      MÁS QUE HELADOS - 🇺🇾
                     </p>
                     <KeyboardArrowDownIcon sx={{ color: "#ffffff" }} />
                   </IconButton>
@@ -580,88 +580,101 @@ function LandingPage(props: Props) {
       ></div> */}
         <Grid
           item
+          direction={"column"}
+          justifyContent={"center"}
+          alignItems={"center"}
           style={{
             maxWidth: "100%",
             width: "100%",
-            height: "400px",
-            minHeight: "400px",
+            height: "500px",
+            minHeight: "500px",
             marginTop: 90,
+            // backgroundColor: "#59b0ff",
           }}
-          sx={{ display: { xs: "none", md: "block" } }}
+          sx={{ display: { xs: "none", md: "flex" } }}
         >
-          <Fade indicators={true} canSwipe={true} arrows={true}>
-            <div className="each-slide">
-              <p
-                style={{
-                  color: "#ffffff",
-                  fontWeight: "bold",
-                  fontSize: 25,
-                  padding: 40,
-                }}
-              >
-                Piwo es una empresa Uruguaya especializada en la fabricacién de
-                helados y jugos naturales ademas contamos con una aplia linea de
-                cafeteria, reposteria y comidas saladas.
-              </p>
-              <div>
-                <img src={images[3]} loading="lazy" />
+          <div
+            style={{
+              maxWidth: "100%",
+              width: "100%",
+            }}
+          >
+            <Fade indicators={true} canSwipe={true} arrows={true}>
+              <div className="each-slide">
+                <p
+                  style={{
+                    color: "#ffffff",
+                    fontWeight: "bold",
+                    fontSize: 30,
+                    padding: 40,
+                  }}
+                >
+                  Piwo es una empresa Uruguaya especializada en la fabricacién
+                  de HELADOS y JUGOS naturales. Ademas contamos con una amplia
+                  linea de CAFETERIA, REPOSTERIA y COMIDAS saladas.
+                </p>
+                <div>
+                  <img src={images[3]} loading="lazy" />
+                </div>
               </div>
-            </div>
 
-            <div className="each-slide">
-              <div>
-                <img src={images[0]} loading="lazy" />
+              <div className="each-slide">
+                <p
+                  style={{
+                    color: "#ffffff",
+                    fontWeight: "bold",
+                    fontSize: 30,
+                    padding: 40,
+                  }}
+                >
+                  De una muy surtida carta de sabores, destacan nuestras
+                  propuestas SIN AZUCAR, opciones VEGANAS, y gustos originales
+                  como los helados de FERNET, CERVEZA, ARAZÁ, HIGO Y PERA.
+                </p>
+
+                <div>
+                  <img src={images[0]} loading="lazy" />
+                </div>
               </div>
-              <p
-                style={{
-                  color: "#ffffff",
-                  fontWeight: "bold",
-                  fontSize: 25,
-                  padding: 40,
-                }}
-              >
-                De una muy surtida carta de sabores, destacan nuestras
-                propuestas sin azucar, opciones veganas, y gustos originales
-                como el de Fernet, el de Cerveza, Maracuya, Nutella.
-              </p>
-            </div>
-            <div className="each-slide">
-              <p
-                style={{
-                  color: "#ffffff",
-                  fontWeight: "bold",
-                  fontSize: 25,
-                  padding: 40,
-                }}
-              >
-                El helado Tailandés, es una técnica innovadora sobre el helado
-                artesanal, que implica la elaboracién del helado en el momento
-                sobre la base de una crema americana o base de chocolate,
-                disponible en Eco Parque Villa Dolores.
-              </p>
-              <div>
-                <img src={images[1]} loading="lazy" />
+
+              <div className="each-slide">
+                <p
+                  style={{
+                    color: "#ffffff",
+                    fontWeight: "bold",
+                    fontSize: 30,
+                    padding: 40,
+                  }}
+                >
+                  También trabajamos el helado Tailandés, una técnica innovadora
+                  sobre el helado elaboración del HELADO EN EL MOMENTO sobre la
+                  base de una crema americana o base de chocolate,
+                </p>
+                <div>
+                  <img src={images[1]} loading="lazy" />
+                </div>
               </div>
-            </div>
-            <div className="each-slide">
-              <div>
-                <img src={images[2]} loading="lazy" />
+
+              <div className="each-slide">
+                <p
+                  style={{
+                    color: "#ffffff",
+                    fontWeight: "bold",
+                    fontSize: 30,
+                    padding: 40,
+                  }}
+                >
+                  Utilizamos productos 100% RECICLABLES, BIODEGRADABLES o
+                  COMPOSTABLES, tanto para los productos de heladeria como de
+                  cafeteria.
+                </p>
+
+                <div>
+                  <img src={images[2]} loading="lazy" />
+                </div>
               </div>
-              <p
-                style={{
-                  color: "#ffffff",
-                  fontWeight: "bold",
-                  fontSize: 25,
-                  padding: 40,
-                }}
-              >
-                Al igual que en nuestro local, el Food truck de Piwo utiliza
-                vasos reciclables, tanto para los productos de heladeria como de
-                cafeteria de la marca Darnel Group (productos 100% reciclables,
-                biodegradables o compostables).
-              </p>
-            </div>
-          </Fade>
+            </Fade>
+          </div>
         </Grid>
 
         <Grid
@@ -761,7 +774,8 @@ function LandingPage(props: Props) {
             justifyContent={"center"}
             height={"100%"}
             // padding={10}
-            spacing={{ xs: 10, md: 10, lg: 2 }}
+            width={"100%"}
+            spacing={{ xs: 10, md: 10, lg: 5 }}
             sx={{
               paddingRight: { xs: 0, md: 0 },
               paddingLeft: { xs: 0, md: 0 },
@@ -827,7 +841,11 @@ function LandingPage(props: Props) {
                   >
                     <a
                       href="/sabores/es"
-                      style={{ fontSize: 50, marginTop: 50 }}
+                      style={{
+                        fontSize: 50,
+                        marginTop: 50,
+                        fontWeight: "bold",
+                      }}
                     >
                       {`VER SABORES>`}
                     </a>
@@ -894,7 +912,14 @@ function LandingPage(props: Props) {
                       justifyContent: "center",
                     }}
                   >
-                    <a href="/jugos/es" style={{ fontSize: 50, marginTop: 50 }}>
+                    <a
+                      href="/jugos/es"
+                      style={{
+                        fontSize: 50,
+                        marginTop: 50,
+                        fontWeight: "bold",
+                      }}
+                    >
                       {`VER SABORES>`}
                     </a>
                   </div>
@@ -962,7 +987,11 @@ function LandingPage(props: Props) {
                   >
                     <a
                       href="/batidos/es"
-                      style={{ fontSize: 50, marginTop: 50 }}
+                      style={{
+                        fontSize: 50,
+                        marginTop: 50,
+                        fontWeight: "bold",
+                      }}
                     >
                       {`VER SABORES>`}
                     </a>
@@ -1202,8 +1231,8 @@ function LandingPage(props: Props) {
                 }}
               >
                 <p style={{ color: "black", fontSize: 35 }}>
-                  Una extensa carta de <b> CAFETERIA</b> y delicias
-                  <b> DULCES</b> disponible para llevar online.
+                  Consulta nuestras opciones de <b>platos salados y bebidas</b>,
+                  disponibles para llevar.
                 </p>
               </Box>
             </Grid>
@@ -1323,10 +1352,13 @@ function LandingPage(props: Props) {
 
         <Grid
           item
+          width={"100%"}
+
           // sx={{ background: "linear-gradient(to bottom, #D6D9D6, #ffffff)" }}
         >
           <Grid
             container
+            width={"100%"}
             sx={{
               display: "flex",
               alignItems: "center",
@@ -1336,22 +1368,21 @@ function LandingPage(props: Props) {
               paddingBottom: 10,
             }}
           >
-            <Grid item xs={12} md={5}>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-              >
-                <h1 style={{ color: "#2e2e2e", fontSize: 80 }}>
-                  NUESTROS LOCALES
-                </h1>
-                <p style={{ color: "#6e6e6e", fontSize: 35, fontWeight: 500 }}>
-                  Estamos instalados con nuestro local comercial en la{" "}
-                  <b> Peatonal Sarandi 340</b> de la Ciudad Vieja y nuestro Food
-                  Truck en la Plaza de Comidas de{" "}
-                  <b> Eco Parque Villa Dolores</b>.
-                </p>
-              </motion.div>
+            <Grid item xs={12} md={5} width={"100%"}>
+              <h1 style={{ color: "#2e2e2e", fontSize: 80 }}>
+                NUESTROS LOCALES
+              </h1>
+              <p style={{ color: "#6e6e6e", fontSize: 35, fontWeight: 500 }}>
+                <b>LOCAL COMERCIAL:</b> Sarandí 340, Ciudad Vieja
+              </p>
+
+              <p style={{ color: "#6e6e6e", fontSize: 35, fontWeight: 500 }}>
+                <b>CASONA</b> del eco parque Villa Dolores.
+              </p>
+
+              <p style={{ color: "#6e6e6e", fontSize: 35, fontWeight: 500 }}>
+                <b>FOOD TRUCK</b> del eco parque Villa Dolores.
+              </p>
             </Grid>
             <Grid
               item
