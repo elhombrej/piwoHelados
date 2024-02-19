@@ -96,11 +96,11 @@ interface Flavors {
 }
 
 const flavorsArrayNoSugar: Flavors[] = [
-  { name: "Ananá", image: anana, icons: "🍍" },
-  { name: "Arándanos", image: arandanos, icons: "🫐" },
-  { name: "Cheesecake", image: cheesecake, icons: "🍰" },
-  { name: "Chocolate Italiano", image: chocolateItaliano, icons: "🍫" },
-  { name: "Chocolate Suizo", image: chocolateSuizo, icons: "🍫" },
+  { name: "Chocolate", image: chocolate, icons: "🍫" },
+  { name: "Maracuyá", image: maracuya, icons: "🥭" },
+  { name: "Frutilla", image: frutilla, icons: "🍓" },
+  { name: "Limón", image: limon, icons: "🍋" },
+  { name: "Vainilla", image: vainilla, icons: "🍦" },
 ];
 
 const flavorsArray: Flavors[] = [
