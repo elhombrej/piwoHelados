@@ -31,31 +31,30 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* @ts-ignore: Unreachable code error */}
         <Route path="/inicio/uy" element={<LandingPage />} />
-        {/* @ts-ignore: Unreachable code error */}
+        
         <Route path="/inicio/br" element={<LandingPageBr />} />
-        {/* @ts-ignore: Unreachable code error */}
+        
         <Route path="/inicio/en" element={<LandingPageEn />} />
-        {/* @ts-ignore: Unreachable code error */}
+        
         <Route path="/sabores/uy" element={<Sabores />} />
-        {/* @ts-ignore: Unreachable code error */}
+        
         <Route path="/sabores/br" element={<SaboresBr />} />
-        {/* @ts-ignore: Unreachable code error */}
+        
         <Route path="/sabores/en" element={<SaboresEn />} />
-        {/* @ts-ignore: Unreachable code error */}
+        
         <Route path="/jugos/uy" element={<Jugos />} />
-        {/* @ts-ignore: Unreachable code error */}
+        
         <Route path="/jugos/br" element={<JugosBr />} />
-        {/* @ts-ignore: Unreachable code error */}
+        
         <Route path="/jugos/en" element={<JugosEn />} />
-        {/* @ts-ignore: Unreachable code error */}
+        
         <Route path="/batidos/uy" element={<Batidos />} />
-        {/* @ts-ignore: Unreachable code error */}
+        
         <Route path="/batidos/br" element={<BatidosBr />} />
-        {/* @ts-ignore: Unreachable code error */}
+        
         <Route path="/batidos/en" element={<BatidosEn />} />
-        {/* @ts-ignore: Unreachable code error */}
+        
         <Route path="*" element={<RedirectToUY />} />{" "}
       </Routes>
     </Router>

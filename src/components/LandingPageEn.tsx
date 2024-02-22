@@ -1,7 +1,6 @@
 import * as React from "react";
-import { Box, Grid, IconButton } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import piwologocolor from "/piwologocolor.png";
-import piwologo from "/piwologo.png";
 import pedidosyalogo from "/pedidosya.svg";
 import piwoheader from "/piwoheader.png";
 import piwocafe from "/piwocafe.png";
@@ -16,44 +15,26 @@ import jugoBack from "/jugoBack.png";
 import frutosRojos from "/iceCreamFlavors/frutosRojos.png";
 import barista from "/barista.png";
 import "./App.css";
-import AppBar from "@mui/material/AppBar";
 import Typography from "@mui/material/Typography";
-import useScrollTrigger from "@mui/material/useScrollTrigger";
-import Slide from "@mui/material/Slide";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { motion } from "framer-motion";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import { styled } from "@mui/material/styles";
-import ButtonBase from "@mui/material/ButtonBase";
 import "leaflet/dist/leaflet.css";
-import Menu, { MenuProps } from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import "react-slideshow-image/dist/styles.css";
 import { Slide as SlideShow } from "react-slideshow-image";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { DivOverlay, divIcon } from "leaflet";
+import { divIcon } from "leaflet";
 import { renderToString } from "react-dom/server";
 import backImg from "/back.png";
 import shake from "/shake.png";
 import NavBar from "./NavBar";
 
-interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window?: () => Window;
-  children: React.ReactElement;
-}
-
 const images = [piwoheader, sandwich, piwojugos, piwolocal1];
 
-function LandingPageEn(props: Props) {
+function LandingPageEn() {
   const points = [
     {
       latitude: -34.900648821436256,
@@ -69,75 +50,9 @@ function LandingPageEn(props: Props) {
     },
   ];
 
-  const StyledMenu = styled((props: MenuProps) => (
-    <Menu
-      elevation={0}
-      anchorOrigin={{
-        vertical: "bottom",
-        horizontal: "right",
-      }}
-      transformOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
-      {...props}
-    />
-  ))(({ theme }) => ({
-    "& .MuiPaper-root": {
-      borderRadius: 6,
-      marginTop: theme.spacing(1),
-      minWidth: 180,
-      color:
-        theme.palette.mode === "light"
-          ? "rgb(55, 65, 81)"
-          : theme.palette.grey[300],
-      boxShadow:
-        "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
-      "& .MuiMenu-list": {
-        padding: "4px 0",
-      },
-      "& .MuiMenuItem-root": {
-        "& .MuiSvgIcon-root": {
-          fontSize: 18,
-          color: theme.palette.text.secondary,
-          marginRight: theme.spacing(1.5),
-        },
-        // "&:active": {
-        //   backgroundColor: alpha(
-        //     theme.palette.primary.main,
-        //     theme.palette.action.selectedOpacity
-        //   ),
-        // },
-      },
-    },
-  }));
-
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
   const materialIcon = divIcon({
     html: renderToString(<LocationOnIcon color="primary" />),
   });
-
-  const [scrollPosition, setScrollPosition] = React.useState(0);
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.pageYOffset);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <>

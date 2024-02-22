@@ -1,58 +1,21 @@
 import * as React from "react";
 import { Box, Grid, IconButton } from "@mui/material";
 import piwologocolor from "/piwologocolor.png";
-import piwologo from "/piwologo.png";
 import piwosalado from "/piwosalado.png";
-
 import taccLogo from "/sinTacc.png";
 import "./App.css";
 import Typography from "@mui/material/Typography";
-import useScrollTrigger from "@mui/material/useScrollTrigger";
-import Slide from "@mui/material/Slide";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { styled } from "@mui/material/styles";
 import ButtonBase from "@mui/material/ButtonBase";
 import "leaflet/dist/leaflet.css";
-import Menu, { MenuProps } from "@mui/material/Menu";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import backImg from "/back.png";
 import NavBar from "./NavBar";
 import { flavorsArrayNoSugarUy, flavorsArrayUy } from "./Flavors";
 
-interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window?: () => Window;
-  children: React.ReactElement;
-}
-
-function HideOnScroll(props: Props) {
-  const { children, window } = props;
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
-  const trigger = useScrollTrigger({
-    target: window ? window() : undefined,
-  });
-
-  return (
-    <Slide appear={false} direction="down" in={!trigger}>
-      {children}
-    </Slide>
-  );
-}
-
-interface Flavors {
-  name: string;
-  image: string; // Supongo que aquí se almacenará la ruta de la imagen
-  icons: string; // Supongo que aquí se almacenará el emoji relacionado con el producto
-  hasNoTacc?: boolean; // Opcional: si el producto no tiene gluten
-}
-
-function Sabores(props: Props) {
+function Sabores() {
   const ImageButton = styled(ButtonBase)(({ theme }) => ({
     position: "relative",
     height: 200,
@@ -83,58 +46,6 @@ function Sabores(props: Props) {
     backgroundSize: "cover",
     backgroundPosition: "center 40%",
   });
-
-  const StyledMenu = styled((props: MenuProps) => (
-    <Menu
-      elevation={0}
-      anchorOrigin={{
-        vertical: "bottom",
-        horizontal: "right",
-      }}
-      transformOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
-      {...props}
-    />
-  ))(({ theme }) => ({
-    "& .MuiPaper-root": {
-      borderRadius: 6,
-      marginTop: theme.spacing(1),
-      minWidth: 180,
-      color:
-        theme.palette.mode === "light"
-          ? "rgb(55, 65, 81)"
-          : theme.palette.grey[300],
-      boxShadow:
-        "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
-      "& .MuiMenu-list": {
-        padding: "4px 0",
-      },
-      "& .MuiMenuItem-root": {
-        "& .MuiSvgIcon-root": {
-          fontSize: 18,
-          color: theme.palette.text.secondary,
-          marginRight: theme.spacing(1.5),
-        },
-        // "&:active": {
-        //   backgroundColor: alpha(
-        //     theme.palette.primary.main,
-        //     theme.palette.action.selectedOpacity
-        //   ),
-        // },
-      },
-    },
-  }));
-
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
 
   return (
     <>
@@ -188,7 +99,6 @@ function Sabores(props: Props) {
             flexDirection: "column",
             textAlign: "center",
             marginTop: 10,
-
           }}
         >
           <Box
