@@ -2,23 +2,23 @@ import * as React from "react";
 import { Box, Grid, IconButton } from "@mui/material";
 import piwologocolor from "/piwologocolor.png";
 import piwologo from "/piwologo.png";
-import piwosalado from "/piwosalado.png";
 
-import taccLogo from "/sinTacc.png";
 import "./App.css";
+import AppBar from "@mui/material/AppBar";
 import Typography from "@mui/material/Typography";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { styled } from "@mui/material/styles";
-import ButtonBase from "@mui/material/ButtonBase";
-import "leaflet/dist/leaflet.css";
 import Menu, { MenuProps } from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import backImg from "/back.png";
 import NavBar from "./NavBar";
-import { flavorsArrayNoSugarEn, flavorsArrayEn } from "./Flavors";
+import { juiceFlavorsArrayEn } from "./Flavors";
 
 interface Props {
   /**
@@ -45,45 +45,7 @@ function HideOnScroll(props: Props) {
   );
 }
 
-interface Flavors {
-  name: string;
-  image: string; // Supongo que aquí se almacenará la ruta de la imagen
-  icons: string; // Supongo que aquí se almacenará el emoji relacionado con el producto
-  hasNoTacc?: boolean; // Opcional: si el producto no tiene gluten
-}
-
-function Sabores(props: Props) {
-  const ImageButton = styled(ButtonBase)(({ theme }) => ({
-    position: "relative",
-    height: 200,
-    [theme.breakpoints.down("sm")]: {
-      width: "100% !important", // Overrides inline-style
-      height: 100,
-    },
-    "&:hover, &.Mui-focusVisible": {
-      zIndex: 1,
-      "& .MuiImageBackdrop-root": {
-        opacity: 0.15,
-      },
-      "& .MuiImageMarked-root": {
-        opacity: 0,
-      },
-      "& .MuiTypography-root": {
-        border: "4px solid currentColor",
-      },
-    },
-  }));
-
-  const ImageSrc = styled("span")({
-    position: "absolute",
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    backgroundSize: "cover",
-    backgroundPosition: "center 40%",
-  });
-
+function JugosEn(props: Props) {
   const StyledMenu = styled((props: MenuProps) => (
     <Menu
       elevation={0}
@@ -138,7 +100,6 @@ function Sabores(props: Props) {
 
   return (
     <>
-      {" "}
       <div
         style={{
           position: "fixed",
@@ -154,6 +115,7 @@ function Sabores(props: Props) {
           filter: "blur(120px)",
         }}
       ></div>
+
       <Grid
         container
         direction="column"
@@ -172,6 +134,7 @@ function Sabores(props: Props) {
       >
         {/* @ts-ignore: Unreachable code error */}
         <NavBar />
+
         <Grid
           item
           sx={{
@@ -180,7 +143,7 @@ function Sabores(props: Props) {
             width: "100%",
             // minHeight: "400px",
             minHeight: "fit-content",
-            padding: { xs: 0, md: 10 },
+            // padding: { xs: 0, md: 10 },
             // margin: 50,
             display: "flex",
             alignItems: "center",
@@ -190,6 +153,7 @@ function Sabores(props: Props) {
             marginTop: 10,
           }}
         >
+          <br />
           <Box
             sx={{
               width: "100%",
@@ -204,42 +168,37 @@ function Sabores(props: Props) {
             <IconButton href="/inicio/en">
               <ArrowBackIosIcon sx={{ fontSize: 40, color: "white" }} />
             </IconButton>
-            <h1 style={{ fontSize: 100 }}>FLAVORS</h1>
+            <h1 style={{ fontSize: 100 }}>
+              {" "}
+              {/* <img
+      src={piwojugos}
+      style={{
+        // position: "absolute",
+        // top: "25%",
+        // left: "25%",
+        width: "300px",
+        height: "auto",
+      }}
+    /> */}
+              JUICES
+            </h1>
             <br />
           </Box>
 
           <Grid item xs={10}>
             <p
               style={{
-                color: "#6e6e6e",
+                color: "#5e5e5e",
                 fontSize: 35,
                 fontWeight: 500,
               }}
             >
-              We apply the 'Know How' of the manufacturing of
-              <b> Italian artisanal ice cream</b> through machinery, techniques,
-              and distinguished training from our
-              <b> master ice cream maker</b>.
+              Our juices are sweetened with <b>Stevia</b> and are{" "}
+              <b>100% natural</b> in origin. They do not contain{" "}
+              <b>colorants, preservatives, or sugars</b>.
             </p>
           </Grid>
 
-          <Grid item>
-            <Box
-              sx={{
-                width: "100%",
-                // padding: { xs: 0, md: 10 },
-                display: "flex",
-                alignItems: "flex-start",
-                justifyContent: "flex-start",
-                flexDirection: "row",
-                textAlign: "center",
-              }}
-            >
-              <h1 style={{ fontSize: 80 }}>Sugar-Free</h1>
-              <br />
-            </Box>
-          </Grid>
-
           <Grid
             container
             // gap={5}
@@ -251,179 +210,61 @@ function Sabores(props: Props) {
               // flexWrap: "wrap",
               // minWidth: 300,
               width: "100%",
-              // paddingTop: 15,
+              // marginTop: 5,
+              padding: 5,
             }}
           >
-            {flavorsArrayNoSugarEn.map((element) => {
+            {juiceFlavorsArrayEn.map((element) => {
               return (
                 <Grid
                   item
-                  xs={6}
-                  md={4}
-                  lg={3}
+                  xs={12}
+                  md={6}
                   sx={{
                     width: "100%",
                     display: "flex",
                     flexDirection: "column",
-                    alignItems: "center",
+                    alignItems: { xs: "center", md: "flex-start" },
                     justifyContent: "center",
                     marginBottom: 5,
                   }}
                 >
                   <Box
                     sx={{
-                      width: { xs: "100px", sm: "200px", md: "200px" },
-                      height: "auto",
-                      borderRadius: 50,
                       overflow: "hidden",
-                    }}
-                  >
-                    <ImageButton
-                      focusRipple
-                      key={piwosalado}
-                      sx={{
-                        width: "100%",
-                      }}
-                    >
-                      <ImageSrc
-                        style={{ backgroundImage: `url(${element.image})` }}
-                      />
-                      {/* <ImageBackdrop className="MuiImageBackdrop-root" /> */}
-                    </ImageButton>
-                  </Box>
-
-                  <Box
-                    sx={{
-                      // width: { xs: "100%", md: "100%" },
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      flexDirection: "column",
+                      flexDirection: { xs: "column", md: "row" },
+                      gap: 2,
+                      // flexWrap: "wrap",
                     }}
                   >
-                    <span
-                      style={{
-                        color: "#6e6e6e",
-                        fontSize: 35,
-                        fontWeight: 500,
-                        padding: 10,
-                      }}
-                    >
-                      {element.name}
-                    </span>
-                    <div>{element.icons}</div>
-                  </Box>
-                  {!element.hasNoTacc && (
-                    <img
-                      src={taccLogo}
-                      width={25}
-                      style={{ marginLeft: 0 }}
-                      loading="lazy"
-                    />
-                  )}
-                </Grid>
-              );
-            })}
-          </Grid>
-
-          <Grid item>
-            <Box
-              sx={{
-                width: "100%",
-                // padding: { xs: 0, md: 10 },
-                display: "flex",
-                alignItems: "flex-start",
-                justifyContent: "flex-start",
-                flexDirection: "row",
-                textAlign: "center",
-              }}
-            >
-              <h1 style={{ fontSize: 80 }}>With Sugar</h1>
-              <br />
-            </Box>
-          </Grid>
-
-          <Grid
-            container
-            // gap={5}
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "center",
-              // flexWrap: "wrap",
-              // minWidth: 300,
-              width: "100%",
-              // paddingTop: 15,
-            }}
-          >
-            {flavorsArrayEn.map((element) => {
-              return (
-                <Grid
-                  item
-                  xs={6}
-                  md={4}
-                  lg={3}
-                  sx={{
-                    width: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    marginBottom: 5,
-                  }}
-                >
-                  <Box
-                    sx={{
-                      width: { xs: "100px", sm: "200px", md: "200px" },
-                      height: "auto",
-                      borderRadius: 50,
-                      overflow: "hidden",
-                    }}
-                  >
-                    <ImageButton
-                      focusRipple
-                      key={piwosalado}
+                    <Box>
+                      <img src={element.image} width={300} loading="lazy" />
+                    </Box>
+                    <Box
                       sx={{
-                        width: "100%",
+                        // width: { xs: "100%", md: "100%" },
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        flexDirection: "column",
                       }}
                     >
-                      <ImageSrc
-                        style={{ backgroundImage: `url(${element.image})` }}
-                      />
-                      {/* <ImageBackdrop className="MuiImageBackdrop-root" /> */}
-                    </ImageButton>
+                      <span
+                        style={{
+                          color: "#6e6e6e",
+                          fontSize: 35,
+                          fontWeight: 700,
+                          padding: 10,
+                        }}
+                      >
+                        {element.name}
+                      </span>
+                      <h2 style={{ color: "#9e9e9e" }}>{element.icons}</h2>
+                    </Box>
                   </Box>
-
-                  <Box
-                    sx={{
-                      // width: { xs: "100%", md: "100%" },
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <span
-                      style={{
-                        color: "#6e6e6e",
-                        fontSize: 35,
-                        fontWeight: 500,
-                        padding: 10,
-                      }}
-                    >
-                      {element.name}
-                    </span>
-                    <div>{element.icons}</div>
-                  </Box>
-                  {!element.hasNoTacc && (
-                    <img
-                      src={taccLogo}
-                      width={25}
-                      style={{ marginLeft: 0 }}
-                      loading="lazy"
-                    />
-                  )}
                 </Grid>
               );
             })}
@@ -487,4 +328,4 @@ function Sabores(props: Props) {
   );
 }
 
-export default Sabores;
+export default JugosEn;

@@ -2,6 +2,9 @@ import * as React from "react";
 import { Box, Grid, IconButton } from "@mui/material";
 import piwologocolor from "/piwologocolor.png";
 import piwologo from "/piwologo.png";
+import shakeYellow from "/shakeYellow.png";
+import shakeRed from "/shakeRed.png";
+import shakeOrange from "/shakeOrange.png";
 import "./App.css";
 import AppBar from "@mui/material/AppBar";
 import Typography from "@mui/material/Typography";
@@ -17,7 +20,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import backImg from "/back.png";
 import NavBar from "./NavBar";
-import { shakesFlavorsArrayUy } from "./Flavors";
+import { shakesFlavorsArrayBr } from "./Flavors";
 
 interface Props {
   /**
@@ -44,7 +47,7 @@ function HideOnScroll(props: Props) {
   );
 }
 
-function Batidos(props: Props) {
+function BatidosBr(props: Props) {
   const StyledMenu = styled((props: MenuProps) => (
     <Menu
       elevation={0}
@@ -137,13 +140,9 @@ function Batidos(props: Props) {
         <Grid
           item
           sx={{
-            // backgroundColor: "#D6D9D6",
             background: "solid",
             width: "100%",
-            // minHeight: "400px",
             minHeight: "fit-content",
-            // padding: { xs: 0, md: 10 },
-            // margin: 50,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -156,7 +155,6 @@ function Batidos(props: Props) {
           <Box
             sx={{
               width: "100%",
-              // padding: { xs: 0, md: 10 },
               display: "flex",
               alignItems: "center",
               justifyContent: "space-evenly",
@@ -164,23 +162,10 @@ function Batidos(props: Props) {
               textAlign: "center",
             }}
           >
-            <IconButton href="/inicio/uy">
+            <IconButton href="/inicio/br">
               <ArrowBackIosIcon sx={{ fontSize: 40, color: "white" }} />
             </IconButton>
-            <h1 style={{ fontSize: 100 }}>
-              {" "}
-              {/* <img
-              src={piwojugos}
-              style={{
-                // position: "absolute",
-                // top: "25%",
-                // left: "25%",
-                width: "300px",
-                height: "auto",
-              }}
-            /> */}
-              BATIDOS
-            </h1>
+            <h1 style={{ fontSize: 100 }}>BATIDOS</h1>
             <br />
           </Box>
 
@@ -192,28 +177,24 @@ function Batidos(props: Props) {
                 fontWeight: 500,
               }}
             >
-              Selección de <b>frutas</b> para nuestros{" "}
-              <b>batidos, licuados o milkshakes con helado</b> elaborados en el
-              momento.
+              Seleção de <b>frutas</b> para nossos{" "}
+              <b>smoothies, sucos ou milkshakes com sorvete</b> preparados na
+              hora.
             </p>
           </Grid>
 
           <Grid
             container
-            // gap={5}
             sx={{
               display: "flex",
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "center",
-              // flexWrap: "wrap",
-              // minWidth: 300,
               width: "100%",
-              // marginTop: 5,
               padding: 5,
             }}
           >
-            {shakesFlavorsArrayUy.map((element) => {
+            {shakesFlavorsArrayBr.map((element) => {
               return (
                 <Grid
                   item
@@ -227,6 +208,7 @@ function Batidos(props: Props) {
                     justifyContent: "center",
                     marginBottom: 5,
                   }}
+                  key={element.name}
                 >
                   <Box
                     sx={{
@@ -236,15 +218,18 @@ function Batidos(props: Props) {
                       justifyContent: "center",
                       flexDirection: { xs: "column", md: "row" },
                       gap: 2,
-                      // flexWrap: "wrap",
                     }}
                   >
                     <Box>
-                      <img src={element.image} width={300} loading="lazy" />
+                      <img
+                        src={element.image}
+                        width={300}
+                        loading="lazy"
+                        alt={element.name}
+                      />
                     </Box>
                     <Box
                       sx={{
-                        // width: { xs: "100%", md: "100%" },
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -289,13 +274,7 @@ function Batidos(props: Props) {
               marginBottom: 30,
             }}
           >
-            <img
-              src={piwologocolor}
-              alt=""
-              width={300}
-              // style={{ maxWidth: "100vw" }}
-              loading="lazy"
-            />
+            <img src={piwologocolor} alt="" width={300} loading="lazy" />
             <b style={{ color: "#2e2e2e" }}>SEGUINOS!</b>
             <div
               style={{
@@ -327,4 +306,4 @@ function Batidos(props: Props) {
   );
 }
 
-export default Batidos;
+export default BatidosBr;

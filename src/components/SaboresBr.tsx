@@ -3,37 +3,9 @@ import { Box, Grid, IconButton } from "@mui/material";
 import piwologocolor from "/piwologocolor.png";
 import piwologo from "/piwologo.png";
 import piwosalado from "/piwosalado.png";
-import anana from "/iceCreamFlavors/anana.png";
-import arandanos from "/iceCreamFlavors/arandanos.png";
-import cheesecake from "/iceCreamFlavors/cheesecake.png";
-import chocolateItaliano from "/iceCreamFlavors/chocolateItaliano.png";
-import chocolateSuizo from "/iceCreamFlavors/chocolateSuizo.png";
-import cremaConPasasDeUvaAlRon from "/iceCreamFlavors/cremaConPasasDeUvaAlRon.png";
-import cremaRusa from "/iceCreamFlavors/cremaRusa.png";
-import dulceDeLecheGranizado from "/iceCreamFlavors/dulceDeLecheGranizado.png";
-import ferreroR from "/iceCreamFlavors/ferreroR.png";
-import frambueza from "/iceCreamFlavors/frambueza.png";
-import frutilla from "/iceCreamFlavors/frutilla.png";
-import frutosRojos from "/iceCreamFlavors/frutosRojos.png";
-import limon from "/iceCreamFlavors/limon.png";
-import mantecol from "/iceCreamFlavors/mantecol.png";
-import maracuya from "/iceCreamFlavors/maracuya.png";
-import menta from "/iceCreamFlavors/menta.png";
-import moka from "/iceCreamFlavors/moka.png";
-import nutella from "/iceCreamFlavors/nutella.png";
-import oreo from "/iceCreamFlavors/oreo.png";
-import pistacho from "/iceCreamFlavors/pistacho.png";
-import sambayonConCereza from "/iceCreamFlavors/sambayonConCereza.png";
-import superDulceDeLeche from "/iceCreamFlavors/superDulceDeLeche.png";
-import tiramisu from "/iceCreamFlavors/tiramisu.png";
-import tramontana from "/iceCreamFlavors/tramontana.png";
-import vainilla from "/iceCreamFlavors/vainilla.png";
-import cocoSplit from "/iceCreamFlavors/cocoSplit.png";
+
 import taccLogo from "/sinTacc.png";
-import piwociudadvieja from "/piwociudadvieja.png";
-import piwovilladolores from "/piwovilladolores.png";
 import "./App.css";
-import AppBar from "@mui/material/AppBar";
 import Typography from "@mui/material/Typography";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
@@ -43,10 +15,10 @@ import { styled } from "@mui/material/styles";
 import ButtonBase from "@mui/material/ButtonBase";
 import "leaflet/dist/leaflet.css";
 import Menu, { MenuProps } from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import backImg from "/back.png";
+import NavBar from "./NavBar";
+import { flavorsArrayBr, flavorsArrayNoSugarBr, flavorsArrayNoSugarUy, flavorsArrayUy } from "./Flavors";
 
 interface Props {
   /**
@@ -73,39 +45,14 @@ function HideOnScroll(props: Props) {
   );
 }
 
-const flavorsArray = [
-  { name: "Abacaxi 🍍", image: anana },
-  { name: "Mirtilos 🫐", image: arandanos },
-  { name: "Cheesecake 🍰", image: cheesecake },
-  { name: "Chocolate Italiano 🍫", image: chocolateItaliano },
-  { name: "Chocolate Suíço 🍫", image: chocolateSuizo },
-  {
-    name: "Creme com Passas ao Rum 🍇🥃",
-    image: cremaConPasasDeUvaAlRon,
-  },
-  { name: "Creme Russo 🍨", image: cremaRusa },
-  { name: "Doce de Leite Granulado 🐮🍫", image: dulceDeLecheGranizado },
-  { name: "Ferrero Rocher 🍫", image: ferreroR },
-  { name: "Framboesa 🍇", image: frambueza },
-  { name: "Morango 🍓", image: frutilla },
-  { name: "Frutas Vermelhas 🍒", image: frutosRojos },
-  { name: "Limão 🍋", image: limon },
-  { name: "Mantecal 🧈", image: mantecol },
-  { name: "Maracujá 🥭", image: maracuya },
-  { name: "Menta 🌿", image: menta },
-  { name: "Mocca ☕", image: moka },
-  { name: "Nutella 🌰", image: nutella },
-  { name: "Oreo 🍪", image: oreo, hasTacc: true },
-  { name: "Pistache 🥜", image: pistacho },
-  { name: "Sambayón com Cereja 🍒", image: sambayonConCereza },
-  { name: "Super Doce de Leite 🐮", image: superDulceDeLeche },
-  { name: "Tiramisu 🍰", image: tiramisu, hasTacc: true },
-  { name: "Tramontana 🍨", image: tramontana, hasTacc: true },
-  { name: "Baunilha 🍦", image: vainilla },
-  { name: "Coco Split 🥥🐮", image: cocoSplit },
-];
+interface Flavors {
+  name: string;
+  image: string; // Supongo que aquí se almacenará la ruta de la imagen
+  icons: string; // Supongo que aquí se almacenará el emoji relacionado con el producto
+  hasNoTacc?: boolean; // Opcional: si el producto no tiene gluten
+}
 
-function SaboresBr(props: Props) {
+function Sabores(props: Props) {
   const ImageButton = styled(ButtonBase)(({ theme }) => ({
     position: "relative",
     height: 200,
@@ -190,477 +137,355 @@ function SaboresBr(props: Props) {
   };
 
   return (
-    <Grid
-      container
-      direction="column"
-      justifyContent="flex-start"
-      alignItems="center"
-      // width="100vw"
-      flexWrap={"nowrap"}
-      sx={{
-        height: "100vh",
-        minHeight: "100vh",
-        padding: 0,
-        maxWidth: "100vw",
-        // backgroundColor: "#D28E31",
-        // background: "solid",
-      }}
-    >
-      <HideOnScroll {...props}>
-        <AppBar style={{ backgroundColor: "#2e2e2e" }}>
-          {/* <Toolbar> */}
+    <>
+      {" "}
+      <div
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: -1,
+          backgroundImage: `url(${backImg})`, // Usa la imagen importada como fondo
+          backgroundRepeat: "cover", // Repite la imagen en todo el alto y ancho
+          backgroundAttachment: "fixed", // Fija la imagen para que se desplace con la ventana
+          backgroundSize: "cover", // Ajusta la imagen al tamaño del contenedor
+          filter: "blur(120px)",
+        }}
+      ></div>
+      <Grid
+        container
+        direction="column"
+        justifyContent="flex-start"
+        alignItems="center"
+        // width="100vw"
+        flexWrap={"nowrap"}
+        sx={{
+          height: "100vh",
+          minHeight: "100vh",
+          padding: 0,
+          maxWidth: "100vw",
+          // backgroundColor: "#D28E31",
+          // background: "solid",
+        }}
+      >
+        {/* @ts-ignore: Unreachable code error */}
+        <NavBar />
+        <Grid
+          item
+          sx={{
+            // backgroundColor: "#D6D9D6",
+            background: "solid",
+            width: "100%",
+            // minHeight: "400px",
+            minHeight: "fit-content",
+            padding: { xs: 0, md: 10 },
+            // margin: 50,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+            textAlign: "center",
+            marginTop: 10,
+
+          }}
+        >
           <Box
             sx={{
-              alignItems: "center",
-              justifyContent: { xs: "space-evenly", md: "space-evenly" },
+              width: "100%",
+              // padding: { xs: 0, md: 10 },
               display: "flex",
+              alignItems: "center",
+              justifyContent: "space-evenly",
+              flexDirection: "row",
+              textAlign: "center",
             }}
           >
-            {/* <h1>CAFE</h1> */}
-            <Box
-              sx={{
-                display: { xs: "flex", md: "none" },
-              }}
-            >
-              <img src={piwologo} width={"80px"} />
-            </Box>
-
-            <Box
-              sx={{
-                display: { xs: "flex", md: "none" },
-              }}
-            >
-              <p
-                style={{
-                  margin: 0,
-                  fontSize: 30,
-                }}
-              ></p>
-            </Box>
-
-            <Box
-              sx={{
-                display: { xs: "none", md: "flex" },
-              }}
-            >
-              {" "}
-              <a href="https://www.facebook.com/piwohelados" target="_ black">
-                <FacebookIcon
-                  sx={{
-                    color: "#ffffff",
-                    fontSize: { xs: 20, sm: 40 },
-                    marginRight: 5,
-                  }}
-                />
-              </a>
-              <a href="https://www.instagram.com/piwohelados" target="_ black">
-                <InstagramIcon
-                  sx={{
-                    color: "#ffffff",
-                    fontSize: { xs: 20, sm: 40 },
-                    marginRight: 5,
-                  }}
-                />
-              </a>
-              <a
-                href="https://api.whatsapp.com/send/?phone=59896728179&type=phone_number&app_absent=0"
-                target="_ black"
-              >
-                <WhatsAppIcon
-                  sx={{ color: "#ffffff", fontSize: { xs: 20, sm: 40 } }}
-                />
-              </a>
-            </Box>
-            <Box
-              sx={{
-                display: { xs: "none", md: "flex" },
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "column",
-                margin: 0,
-              }}
-            >
-              <img src={piwologo} width={"150px"} />
-            </Box>
-            <Box
-              sx={{
-                display: { xs: "none", md: "flex" },
-              }}
-            >
-              <div>
-                <IconButton
-                  id="demo-customized-button"
-                  aria-controls={open ? "demo-customized-menu" : undefined}
-                  aria-haspopup="true"
-                  aria-expanded={open ? "true" : undefined}
-                  // variant="contained"
-                  // disableElevation
-                  onClick={handleClick}
-                >
-                  <p
-                    style={{
-                      margin: 0,
-                      fontSize: 30,
-                      color: "#ffffff",
-                    }}
-                  >
-                    🇧🇷 MAIS QUE GELADO
-                  </p>
-                  <KeyboardArrowDownIcon sx={{ color: "#ffffff" }} />
-                </IconButton>
-              </div>
-            </Box>
-            <Box
-              sx={{
-                display: { xs: "flex", md: "none" },
-              }}
-            >
-              <div>
-                <IconButton
-                  id="demo-customized-button"
-                  aria-controls={open ? "demo-customized-menu" : undefined}
-                  aria-haspopup="true"
-                  aria-expanded={open ? "true" : undefined}
-                  // variant="contained"
-                  // disableElevation
-                  onClick={handleClick}
-                >
-                  <p
-                    style={{
-                      margin: 0,
-                      fontSize: 25,
-                      color: "#ffffff",
-                    }}
-                  >
-                    🇧🇷 MAIS QUE GELADO
-                  </p>
-                  <KeyboardArrowDownIcon sx={{ color: "#ffffff" }} />
-                </IconButton>
-                <StyledMenu
-                  id="demo-customized-menu"
-                  MenuListProps={{
-                    "aria-labelledby": "demo-customized-button",
-                  }}
-                  anchorEl={anchorEl}
-                  open={open}
-                  onClose={handleClose}
-                  sx={{ margin: 0 }}
-                >
-                  <MenuItem
-                    onClick={handleClose}
-                    disableRipple
-                    sx={{ height: 60 }}
-                  >
-                    <a
-                      href={import.meta.env.VITE_FRONTEND_URL + "/sabores/es"}
-                      //   target="_ black"
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          //   color: "#ffffff",
-                          fontSize: { xs: 20, sm: 40 },
-                          marginRight: 2,
-                        }}
-                      >
-                        🇺🇾
-                      </Typography>
-                      <p style={{ fontSize: 30 }}>Uruguay</p>
-                    </a>
-                  </MenuItem>
-
-                  <MenuItem
-                    onClick={handleClose}
-                    disableRipple
-                    sx={{ height: 60 }}
-                  >
-                    <a
-                      href={import.meta.env.VITE_FRONTEND_URL + "/sabores/br"}
-                      //   target="_ black"
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          //   color: "#ffffff",
-                          fontSize: { xs: 20, sm: 40 },
-                          marginRight: 2,
-                        }}
-                      >
-                        🇧🇷
-                      </Typography>
-                      <p style={{ fontSize: 30 }}>português</p>
-                    </a>
-                  </MenuItem>
-
-                  <MenuItem
-                    onClick={handleClose}
-                    disableRipple
-                    sx={{ height: 60 }}
-                  >
-                    <a
-                      href={import.meta.env.VITE_FRONTEND_URL + "/sabores/en"}
-                      //   target="_ black"
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          //   color: "#ffffff",
-                          fontSize: { xs: 20, sm: 40 },
-                          marginRight: 2,
-                        }}
-                      >
-                        🇺🇸
-                      </Typography>
-                      <p style={{ fontSize: 30 }}>English</p>
-                    </a>
-                  </MenuItem>
-
-                  <MenuItem
-                    onClick={handleClose}
-                    disableRipple
-                    sx={{ height: 60, display: { xs: "flex", md: "none" } }}
-                  >
-                    <a
-                      href="https://www.facebook.com/piwohelados"
-                      target="_ black"
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <FacebookIcon
-                        sx={{
-                          color: "#ffffff",
-                          fontSize: { xs: 20, sm: 40 },
-                          marginRight: 5,
-                        }}
-                      />
-                      <p style={{ fontSize: 30 }}>Facebook</p>
-                    </a>
-                  </MenuItem>
-                  <MenuItem
-                    onClick={handleClose}
-                    disableRipple
-                    sx={{ height: 60, display: { xs: "flex", md: "none" } }}
-                  >
-                    <a
-                      href="https://www.instagram.com/piwohelados"
-                      target="_ black"
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <InstagramIcon
-                        sx={{
-                          color: "#ffffff",
-                          fontSize: { xs: 20, sm: 40 },
-                          marginRight: 5,
-                        }}
-                      />
-                      <p style={{ fontSize: 30 }}>Instagram</p>
-                    </a>
-                  </MenuItem>
-                  <MenuItem
-                    onClick={handleClose}
-                    disableRipple
-                    sx={{ height: 60, display: { xs: "flex", md: "none" } }}
-                  >
-                    <a
-                      href="https://api.whatsapp.com/send/?phone=59896728179&type=phone_number&app_absent=0"
-                      target="_ black"
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <WhatsAppIcon
-                        sx={{ color: "#ffffff", fontSize: { xs: 20, sm: 40 } }}
-                      />
-                      <p style={{ fontSize: 30 }}>WhatsApp</p>
-                    </a>
-                  </MenuItem>
-                </StyledMenu>
-              </div>
-            </Box>
-            {/* <h1>JUGOS NATURALES</h1> */}
+            <IconButton href="/inicio/br">
+              <ArrowBackIosIcon sx={{ fontSize: 40, color: "white" }} />
+            </IconButton>
+            <h1 style={{ fontSize: 100 }}>SABORES</h1>
+            <br />
           </Box>
-          {/* </Toolbar> */}
-        </AppBar>
-      </HideOnScroll>
 
-      <Grid
-        item
-        sx={{
-          backgroundColor: "#D6D9D6",
-          background: "solid",
-          width: "100%",
-          // minHeight: "400px",
-          minHeight: "fit-content",
-          padding: { xs: 0, md: 10 },
-          // margin: 50,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          textAlign: "center",
-        }}
-      >
-        <Box
-          sx={{
-            width: "100%",
-            // padding: { xs: 0, md: 10 },
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-            flexDirection: "row",
-            textAlign: "center",
-          }}
-        >
-          <IconButton href="/br">
-            <ArrowBackIosIcon sx={{ fontSize: 40, color: "white" }} />
-          </IconButton>
-          <h1 style={{ fontSize: 100 }}>Sabores</h1>
-          <br />
-        </Box>
+          <Grid item xs={10}>
+            <p
+              style={{
+                color: "#6e6e6e",
+                fontSize: 35,
+                fontWeight: 500,
+              }}
+            >
+              Aplicamos o 'Know How' da fabricação do
+              <b> sorvete artesanal italiano</b> através de maquinário, técnicas
+              e uma formação distinta de nosso
+              <b> mestre sorveteiro</b>.
+            </p>
+          </Grid>
 
-        <Grid
-          container
-          // gap={5}
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "center",
-            // flexWrap: "wrap",
-            // minWidth: 300,
-            width: "100%",
-            // marginTop: 5,
-          }}
-        >
-          {flavorsArray.map((element) => {
-            return (
-              <Grid
-                item
-                xs={6}
-                md={4}
-                sx={{
-                  width: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginBottom: 5,
-                }}
-              >
-                <Box
+          <Grid item>
+            <Box
+              sx={{
+                width: "100%",
+                // padding: { xs: 0, md: 10 },
+                display: "flex",
+                alignItems: "flex-start",
+                justifyContent: "flex-start",
+                flexDirection: "row",
+                textAlign: "center",
+              }}
+            >
+              <h1 style={{ fontSize: 80 }}>Sem Açúcar</h1>
+              <br />
+            </Box>
+          </Grid>
+
+          <Grid
+            container
+            // gap={5}
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "center",
+              // flexWrap: "wrap",
+              // minWidth: 300,
+              width: "100%",
+              // paddingTop: 15,
+            }}
+          >
+            {flavorsArrayNoSugarBr.map((element) => {
+              return (
+                <Grid
+                  item
+                  xs={6}
+                  md={4}
+                  lg={3}
                   sx={{
-                    width: { xs: "100px", sm: "200px", md: "200px" },
-                    height: "auto",
-                    borderRadius: 50,
-                    overflow: "hidden",
-                  }}
-                >
-                  <ImageButton
-                    focusRipple
-                    key={piwosalado}
-                    sx={{
-                      width: "100%",
-                    }}
-                  >
-                    <ImageSrc
-                      style={{ backgroundImage: `url(${element.image})` }}
-                    />
-                    {/* <ImageBackdrop className="MuiImageBackdrop-root" /> */}
-                  </ImageButton>
-                </Box>
-                <Box
-                  sx={{
-                    // width: { xs: "100%", md: "100%" },
+                    width: "100%",
                     display: "flex",
+                    flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
+                    marginBottom: 5,
                   }}
                 >
-                  <h2 style={{ color: "#9e9e9e" }}>{element.name}</h2>
-                </Box>
-                {!element.hasTacc && (
-                  <img src={taccLogo} width={25} style={{ marginLeft: 0 }} />
-                )}
-              </Grid>
-            );
-          })}
-        </Grid>
-      </Grid>
+                  <Box
+                    sx={{
+                      width: { xs: "100px", sm: "200px", md: "200px" },
+                      height: "auto",
+                      borderRadius: 50,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <ImageButton
+                      focusRipple
+                      key={piwosalado}
+                      sx={{
+                        width: "100%",
+                      }}
+                    >
+                      <ImageSrc
+                        style={{ backgroundImage: `url(${element.image})` }}
+                      />
+                      {/* <ImageBackdrop className="MuiImageBackdrop-root" /> */}
+                    </ImageButton>
+                  </Box>
 
-      <Grid
-        item
-        style={{
-          backgroundColor: "#ffffff",
-          background: "solid",
-          width: "100%",
-          height: "400px",
-        }}
-      >
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            marginBottom: 30,
-          }}
-        >
-          <img
-            src={piwologocolor}
-            alt=""
-            width={300}
-            // style={{ maxWidth: "100vw" }}
-          />
-          <b style={{ color: "#2e2e2e" }}>SIGA-NOS!</b>
-          <div
-            style={{
+                  <Box
+                    sx={{
+                      // width: { xs: "100%", md: "100%" },
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <span
+                      style={{
+                        color: "#6e6e6e",
+                        fontSize: 35,
+                        fontWeight: 500,
+                        padding: 10,
+                      }}
+                    >
+                      {element.name}
+                    </span>
+                    <div>{element.icons}</div>
+                  </Box>
+                  {!element.hasNoTacc && (
+                    <img
+                      src={taccLogo}
+                      width={25}
+                      style={{ marginLeft: 0 }}
+                      loading="lazy"
+                    />
+                  )}
+                </Grid>
+              );
+            })}
+          </Grid>
+
+          <Grid item>
+            <Box
+              sx={{
+                width: "100%",
+                // padding: { xs: 0, md: 10 },
+                display: "flex",
+                alignItems: "flex-start",
+                justifyContent: "flex-start",
+                flexDirection: "row",
+                textAlign: "center",
+              }}
+            >
+              <h1 style={{ fontSize: 80 }}>Com Açúcar</h1>
+              <br />
+            </Box>
+          </Grid>
+
+          <Grid
+            container
+            // gap={5}
+            sx={{
               display: "flex",
-              justifyContent: "space-between",
+              flexDirection: "row",
               alignItems: "center",
+              justifyContent: "center",
+              // flexWrap: "wrap",
+              // minWidth: 300,
+              width: "100%",
+              // paddingTop: 15,
             }}
           >
-            <a href="https://www.instagram.com/piwohelados" target="_ black">
-              <InstagramIcon style={{ fontSize: 40, margin: 10 }} />
-            </a>
-            <a href="https://www.facebook.com/piwohelados" target="_ black">
-              <FacebookIcon style={{ fontSize: 40, margin: 10 }} />
-            </a>
+            {flavorsArrayBr.map((element) => {
+              return (
+                <Grid
+                  item
+                  xs={6}
+                  md={4}
+                  lg={3}
+                  sx={{
+                    width: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginBottom: 5,
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: { xs: "100px", sm: "200px", md: "200px" },
+                      height: "auto",
+                      borderRadius: 50,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <ImageButton
+                      focusRipple
+                      key={piwosalado}
+                      sx={{
+                        width: "100%",
+                      }}
+                    >
+                      <ImageSrc
+                        style={{ backgroundImage: `url(${element.image})` }}
+                      />
+                      {/* <ImageBackdrop className="MuiImageBackdrop-root" /> */}
+                    </ImageButton>
+                  </Box>
+
+                  <Box
+                    sx={{
+                      // width: { xs: "100%", md: "100%" },
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <span
+                      style={{
+                        color: "#6e6e6e",
+                        fontSize: 35,
+                        fontWeight: 500,
+                        padding: 10,
+                      }}
+                    >
+                      {element.name}
+                    </span>
+                    <div>{element.icons}</div>
+                  </Box>
+                  {!element.hasNoTacc && (
+                    <img
+                      src={taccLogo}
+                      width={25}
+                      style={{ marginLeft: 0 }}
+                      loading="lazy"
+                    />
+                  )}
+                </Grid>
+              );
+            })}
+          </Grid>
+        </Grid>
+
+        <Grid
+          item
+          style={{
+            backgroundColor: "#ffffff",
+            background: "solid",
+            width: "100%",
+            height: "400px",
+          }}
+        >
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              marginBottom: 30,
+            }}
+          >
+            <img
+              src={piwologocolor}
+              alt=""
+              width={300}
+              // style={{ maxWidth: "100vw" }}
+              loading="lazy"
+            />
+            <b style={{ color: "#2e2e2e" }}>SIGA-NOS!</b>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <a href="https://www.instagram.com/piwohelados" target="_ black">
+                <InstagramIcon style={{ fontSize: 40, margin: 10 }} />
+              </a>
+              <a href="https://www.facebook.com/piwohelados" target="_ black">
+                <FacebookIcon style={{ fontSize: 40, margin: 10 }} />
+              </a>
+            </div>
+            <Typography style={{ color: "#cdcdcd" }}>
+              <a href="mailto:info.piwohelados@gmail.com">
+                info.piwohelados@gmail.com
+              </a>
+            </Typography>
+            <br />
+            <Typography style={{ color: "#cdcdcd" }}>
+              © 2024 Piwo Helados
+            </Typography>
           </div>
-          <Typography style={{ color: "#cdcdcd" }}>
-            © 2024 Piwo Helados
-          </Typography>
-        </div>
+        </Grid>
       </Grid>
-    </Grid>
+    </>
   );
 }
 
-export default SaboresBr;
+export default Sabores;
