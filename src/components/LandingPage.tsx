@@ -534,7 +534,7 @@ function LandingPage() {
                 transition={{ duration: 1 }}
               >
                 <h1 style={{ color: "#2e2e2e", fontSize: 80 }}>
-                  CAFETERIA DE ESPECIALIDAD
+                  CAFETERÍA DE ESPECIALIDAD
                 </h1>
                 <p style={{ color: "#6e6e6e", fontSize: 35, fontWeight: 500 }}>
                   Trabajamos con la marca de <b> Cafés de especialidad</b> mas
@@ -786,7 +786,7 @@ function LandingPage() {
                         margin: 0, // Elimina el margen del texto para evitar espacios no deseados
                       }}
                     >
-                      PIWO RESTÓ
+                      PIWO RESTO
                     </p>
                   </div>
                 </div>

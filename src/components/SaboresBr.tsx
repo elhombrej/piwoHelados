@@ -134,23 +134,6 @@ function Sabores() {
             </p>
           </Grid>
 
-          <Grid item>
-            <Box
-              sx={{
-                width: "100%",
-                // padding: { xs: 0, md: 10 },
-                display: "flex",
-                alignItems: "flex-start",
-                justifyContent: "flex-start",
-                flexDirection: "row",
-                textAlign: "center",
-              }}
-            >
-              <h1 style={{ fontSize: 80 }}>Sem Açúcar</h1>
-              <br />
-            </Box>
-          </Grid>
-
           <Grid
             container
             // gap={5}
@@ -162,110 +145,7 @@ function Sabores() {
               // flexWrap: "wrap",
               // minWidth: 300,
               width: "100%",
-              // paddingTop: 15,
-            }}
-          >
-            {flavorsArrayNoSugarBr.map((element) => {
-              return (
-                <Grid
-                  item
-                  xs={6}
-                  md={4}
-                  lg={3}
-                  sx={{
-                    width: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    marginBottom: 5,
-                  }}
-                >
-                  <Box
-                    sx={{
-                      width: { xs: "100px", sm: "200px", md: "200px" },
-                      height: "auto",
-                      borderRadius: 50,
-                      overflow: "hidden",
-                    }}
-                  >
-                    <ImageButton
-                      focusRipple
-                      key={piwosalado}
-                      sx={{
-                        width: "100%",
-                      }}
-                    >
-                      <ImageSrc
-                        style={{ backgroundImage: `url(${element.image})` }}
-                      />
-                      {/* <ImageBackdrop className="MuiImageBackdrop-root" /> */}
-                    </ImageButton>
-                  </Box>
-
-                  <Box
-                    sx={{
-                      // width: { xs: "100%", md: "100%" },
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <span
-                      style={{
-                        color: "#6e6e6e",
-                        fontSize: 35,
-                        fontWeight: 500,
-                        padding: 10,
-                      }}
-                    >
-                      {element.name}
-                    </span>
-                    <div>{element.icons}</div>
-                  </Box>
-                  {!element.hasNoTacc && (
-                    <img
-                      src={taccLogo}
-                      width={25}
-                      style={{ marginLeft: 0 }}
-                      loading="lazy"
-                    />
-                  )}
-                </Grid>
-              );
-            })}
-          </Grid>
-
-          <Grid item>
-            <Box
-              sx={{
-                width: "100%",
-                // padding: { xs: 0, md: 10 },
-                display: "flex",
-                alignItems: "flex-start",
-                justifyContent: "flex-start",
-                flexDirection: "row",
-                textAlign: "center",
-              }}
-            >
-              <h1 style={{ fontSize: 80 }}>Com Açúcar</h1>
-              <br />
-            </Box>
-          </Grid>
-
-          <Grid
-            container
-            // gap={5}
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "center",
-              // flexWrap: "wrap",
-              // minWidth: 300,
-              width: "100%",
-              // paddingTop: 15,
+              paddingTop: 15,
             }}
           >
             {flavorsArrayBr.map((element) => {
@@ -338,6 +218,19 @@ function Sabores() {
                 </Grid>
               );
             })}
+          </Grid>
+
+          <Grid item xs={10}>
+            <p
+              style={{
+                color: "#6e6e6e",
+                fontSize: 35,
+                fontWeight: 500,
+              }}
+            >
+              <b>Sabores sem açúcar disponíveis:</b> Baunilha, Chocolate,
+              Maracujá, Morango e Limão
+            </p>
           </Grid>
         </Grid>
 

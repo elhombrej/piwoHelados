@@ -777,7 +777,7 @@ function LandingPageBr() {
                         margin: 0,
                       }}
                     >
-                      PIWO RESTÓ
+                      PIWO RESTO
                     </p>
                   </div>
                 </div>
