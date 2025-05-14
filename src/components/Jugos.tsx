@@ -9,6 +9,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import backImg from "/back.png";
 import NavBar from "./NavBar";
 import { juiceFlavorsArrayUy } from "./Flavors";
+import FooterES_BR from "./FooterES_BR";
 
 function Jugos() {
   return (
@@ -47,7 +48,6 @@ function Jugos() {
       >
         {/* @ts-ignore: Unreachable code error */}
         <NavBar />
-
         <Grid
           item
           sx={{
@@ -183,59 +183,7 @@ function Jugos() {
             })}
           </Grid>
         </Grid>
-
-        <Grid
-          item
-          style={{
-            backgroundColor: "#ffffff",
-            background: "solid",
-            width: "100%",
-            height: "400px",
-          }}
-        >
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              marginBottom: 30,
-            }}
-          >
-            <img
-              src={piwologocolor}
-              alt=""
-              width={300}
-              // style={{ maxWidth: "100vw" }}
-              loading="lazy"
-            />
-            <b style={{ color: "#2e2e2e" }}>SEGUINOS!</b>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <a href="https://www.instagram.com/piwohelados" target="_ black">
-                <InstagramIcon style={{ fontSize: 40, margin: 10 }} />
-              </a>
-              <a href="https://www.facebook.com/piwohelados" target="_ black">
-                <FacebookIcon style={{ fontSize: 40, margin: 10 }} />
-              </a>
-            </div>
-            <Typography style={{ color: "#cdcdcd" }}>
-              <a href="mailto:info.piwohelados@gmail.com">
-                info.piwohelados@gmail.com
-              </a>
-            </Typography>
-            <br />
-            <Typography style={{ color: "#cdcdcd" }}>
-              © 2024 Piwo Helados
-            </Typography>
-          </div>
-        </Grid>
+        <FooterES_BR />{" "}
       </Grid>
     </>
   );

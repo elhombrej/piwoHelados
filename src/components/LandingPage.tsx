@@ -31,6 +31,7 @@ import { renderToString } from "react-dom/server";
 import backImg from "/back.png";
 import shake from "/shake.png";
 import NavBar from "./NavBar";
+import FooterES_BR from "./FooterES_BR";
 
 const images = [piwoheader, sandwich, piwojugos, piwolocal1];
 
@@ -882,58 +883,7 @@ function LandingPage() {
           </Grid>
         </Grid>
 
-        <Grid
-          item
-          style={{
-            backgroundColor: "#ffffff",
-            background: "solid",
-            width: "100%",
-            height: "400px",
-          }}
-        >
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              marginBottom: 30,
-            }}
-          >
-            <img
-              src={piwologocolor}
-              alt=""
-              width={300}
-              loading="lazy"
-              // style={{ maxWidth: "100vw" }}
-            />
-            <b style={{ color: "#2e2e2e" }}>SEGUÍNOS!</b>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <a href="https://www.instagram.com/piwohelados" target="_ black">
-                <InstagramIcon style={{ fontSize: 40, margin: 10 }} />
-              </a>
-              <a href="https://www.facebook.com/piwohelados" target="_ black">
-                <FacebookIcon style={{ fontSize: 40, margin: 10 }} />
-              </a>
-            </div>
-            <Typography style={{ color: "#cdcdcd" }}>
-              <a href="mailto:info.piwohelados@gmail.com">
-                info.piwohelados@gmail.com
-              </a>
-            </Typography>
-            <br />
-            <Typography style={{ color: "#cdcdcd" }}>
-              © 2024 Piwo Helados
-            </Typography>
-          </div>
-        </Grid>
+        <FooterES_BR />
       </Grid>
     </>
   );
