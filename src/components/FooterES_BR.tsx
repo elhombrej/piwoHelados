@@ -70,8 +70,8 @@ const FooterES_BR = () => {
           sx={{ fontSize: { xs: "9px", sm: "15px" } }}
         >
           Desarrolle su sitio web con{" "}
-          <a href="https://padronsistemas.vercel.app" style={{ color: "blue" }}>
-            padronsistemas.vercel.app
+          <a href="https://padronsistemas.com" style={{ color: "blue" }}>
+            padronsistemas.com
           </a>
         </Typography>
       </Grid>
