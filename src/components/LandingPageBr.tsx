@@ -534,10 +534,8 @@ function LandingPageBr() {
                   CAFETERIA ESPECIALIZADA
                 </h1>
                 <p style={{ color: "#6e6e6e", fontSize: 35, fontWeight: 500 }}>
-                  Trabalhamos com a marca de <b>Cafés Especiais</b> mais
-                  reconhecida da Colômbia, <b>Amor Perfecto</b>. Contamos com{" "}
-                  <b>baristas profissionais</b> para servir o melhor café em
-                  suas diferentes versões.
+                  Contamos com <b>baristas profissionais</b> para servir o
+                  melhor café em suas diferentes versões.
                 </p>
               </motion.div>
             </Grid>
@@ -806,24 +804,17 @@ function LandingPageBr() {
             <Grid item xs={12} md={5} width={"100%"}>
               <h1 style={{ color: "#2e2e2e", fontSize: 80 }}>NOSSAS LOJAS</h1>
               <p style={{ color: "#6e6e6e", fontSize: 35, fontWeight: 500 }}>
-                <b>LOJA COMERCIAL:</b> Sarandí 340, Ciudad Vieja.
-              </p>
-
-              <p style={{ color: "#6e6e6e", fontSize: 35, fontWeight: 500 }}>
-                <b>FAZENDA</b> do eco parque Villa Dolores.
-              </p>
-
-              <p style={{ color: "#6e6e6e", fontSize: 35, fontWeight: 500 }}>
-                <b>CAMINHÃO DE COMIDA</b> do eco parque Villa Dolores.
+                Estamos localizados na{" "}
+                <b>Ciudad Vieja (Centro Histórico), Sarandi 340</b>
               </p>
             </Grid>
             <Grid
               item
               xs={12}
               md={5}
-              style={{ height: "400px", width: "100%" }}
+              style={{ height: "400px", width: "100%" , paddingTop:50 }}
             >
-              <MapContainer
+              {/* <MapContainer
                 center={[-34.904468, -56.176189]}
                 zoom={12}
                 style={{ height: "100%", width: "100%" }}
@@ -846,7 +837,13 @@ function LandingPageBr() {
                     </Popup>
                   </Marker>
                 ))}
-              </MapContainer>
+              </MapContainer> */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13088.164123241184!2d-56.21470959999999!3d-34.903322949999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f7f819e03c191%3A0xeedff358b503569!2sPiwo%20Helados!5e0!3m2!1sen!2suy!4v1751493930210!5m2!1sen!2suy"
+                width="100%"
+                height="100%"
+                loading="lazy"
+              ></iframe>{" "}
             </Grid>{" "}
           </Grid>
         </Grid>
